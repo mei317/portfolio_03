@@ -1,0 +1,44 @@
+
+*{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+*:before, *:after{
+    box-sizing: inherit;
+}
+
+a, a:visited{
+    color: inherit;
+}
+
+img {
+    border-style: none;
+}
+
+.u-twitter, .u-instagram{
+    color: #fff;
+    content: "";
+    display: inline-block;
+    width:  4vw;
+    height: 4vw;
+    margin: 0 1em;
+}
+
+.u-external-link{
+    color: #fff;
+}
+
+.u-external-link__b{
+    color: #fff;
+    content: "";
+    display: inline-block;
+    width: 2.267vw;
+    height: 2.267vw;
+    margin-left: 0.7em;
+}

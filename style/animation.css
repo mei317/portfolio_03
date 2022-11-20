@@ -1,0 +1,114 @@
+/* SP */
+@media screen and (max-width:768px) {
+
+    body #topWrap div.p-topWrap__banner.ar{
+        transform: translateX(-50vw);
+    }
+
+    body #topWrap div.p-topWrap__banner.ticket{
+        transform: translateX(50vw);
+    }
+}
+/* PC */
+@media screen and (min-width:769px) {
+
+    body #topWrap div.p-topWrap__banner.ar{
+        transform: translateX(-200px);
+    }
+
+    body #topWrap div.p-topWrap__bannerPC.ticket{
+        transform: translateX(200px);
+    }
+
+    body[data-mode=loaded][data-scroll=""] #topWrap nav,
+    body[data-mode=loaded][data-scroll=""] #topWrap div.p-topWrap__bannerPC,
+    body[data-mode=loaded][data-scroll=""] #topWrap #newsPC{
+        transition-delay: .5s;
+    }
+}
+
+body[data-mode=loaded]:not([data-scroll=bottom]) #topWrap #news,
+body[data-mode=loaded]:not([data-scroll=bottom]) #topWrap #newsPC,
+body[data-mode=loaded][data-scroll=middle] #topWrap header,
+body[data-mode=loaded][data-scroll=bottom] #topWrap header,
+body[data-mode=loaded][data-scroll=top] #topWrap div.p-topWrap__banner,
+body[data-mode=loaded][data-scroll=""] #topWrap div.p-topWrap__banner,
+body[data-mode=loaded][data-scroll=top] #topWrap div.p-topWrap__bannerPC,
+body[data-mode=loaded][data-scroll=""] #topWrap div.p-topWrap__bannerPC,
+body[data-mode=loaded] #topWrap nav{
+    transition-duration: .5s;
+    transform: none;
+}
+
+
+body[data-mode=loaded] #topWrap header,
+body[data-mode=loaded] #topWrap nav,
+body[data-mode=loaded] #topWrap div.p-topWrap__banner,
+body[data-mode=loaded] #topWrap div.p-topWrap__bannerPC,
+body[data-mode=loaded] #topWrap #news,
+body[data-mode=loaded] #topWrap #newsPC{
+    transition-duration: .25s;
+}
+
+body #topWrap header,
+body #topWrap nav,
+body #topWrap div.p-topWrap__banner,
+body #topWrap div.p-topWrap__bannerPC,
+body #topWrap #news,
+body #topWrap #newsPC{
+    transition: transform 0s 0s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body #topWrap #news,
+body #topWrap #newsPC{
+    transform: translateY(50px);
+}
+
+#topWrap #newsBar div.p-topWrap__newsBar__Contents.start{
+    animation: 0s 0s linear infinite marquee;
+}
+
+body[data-mode=loaded] #titleSection h1{
+    transition-duration: .8s;
+    transform: none;
+}
+
+#accessSection h2.view, #ticketSection h2.view,
+#programSection h2.view, #floorSection h2.view,
+#comedianSection h2.view, #aboutSection h2.view{
+    animation: .3s cubic-bezier(0.34, 1.56, 0.64, 1) 1 forwards scale_visible;
+}
+
+.swipeAndroid .c-swipeSlide, .c-swipeWrap{
+    transform: translate3d(0px,0,0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
