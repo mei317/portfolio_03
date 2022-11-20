@@ -68,7 +68,7 @@ body #topWrap nav{
     right: 20px;
 }
 
-#topWrap nav ul{
+#topWrap nav .p-topWrap__sns{
     display: flex;
     justify-content: space-between;
     width: 59px;
@@ -78,10 +78,6 @@ body #topWrap nav{
     border-right: 2px solid rgba(255,255,255,.4);
 }
 
-#topWrap nav li{
-    width: 18px;
-    height: 18px;
-}
 
 #topWrap nav li a{
     width: 18px;
@@ -94,10 +90,10 @@ body #topWrap nav{
 }
 
 #topWrap nav div.p-topWrap__mask a{
-    width: 21px;
-    height: 22px;
-    background: no-repeat 0 0/21px 22px;
-    background-image: url(../img/fix/mask.svg),url(../img/fix/mask_over.svg);
+    width: 27px;
+    height: 30px;
+    background: no-repeat 0 0/28px 30px;
+    background-image: url(./../img/mask.png);
     background-position: 0 0,21px 0;
     position: relative;
 }
@@ -367,9 +363,14 @@ body #topWrap nav{
 }
 
 #aboutSection::before{
-    height: 88px;
-    background-image: url(../img/about/bg_top.png);
+    content: "";
+    width: 100%;
+    height: 13.333vw;
+    background: 0 0/150px 150px #ea7fb8;
+    position: absolute;
     top: 0;
+    left: 0;
+    clip-path: polygon(14% 27%, 45.6% 13%, 47.333% 94%, 79% 25%, 100% 54%, 0% 100%);
 }
 
 #aboutSection::after {
@@ -385,16 +386,17 @@ body #topWrap nav{
 }
 
 #aboutSection div.c-mob_star{
-    left: -157.5px;
-    top: -130px;
-    transform: scale(0.38)rotate(17.57deg);
+    width: 197px;
+    height: 100px;
+    position: absolute;
+    top: -160px;
+    left: 455px;
 }
 
 div.c-mob_star.type{
     width: 197px;
     height: 100px;
     position: absolute;
-    transform-origin: 50% 50%;
 }
 
 div.c-mob_star.type img.c-starItemA,
@@ -410,7 +412,7 @@ div.c-mob_star.type img.c-starItemA{
 }
 
 div.c-mob_star.type img.c-starItemB{
-    right: 0;
+    right: 30px;
 }
 
 #accessSection h2,
@@ -469,16 +471,13 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #aboutSection div.p-aboutData div.c-mob_star{
-    transform: scale(0.16);
-    transform-origin: 0 0;
-    top: 50%;
-    left: 0;
-    margin-top: -8px;
+    top: -2px;
+    left: -20px;
 }
 
 #aboutSection div.p-aboutData div.c-mob_star img{
-    width: 6vw;
-    height: 6vw;
+    width: 2vw;
+    height: 2vw;
 }
 
 #aboutSection div.p-aboutData dt p{
@@ -504,7 +503,7 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #comedianSection div.c-mob_star{
-    top: -12vw;
+    top: -4vw;
 }
 
 #comedianSection h2{
@@ -653,7 +652,8 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #programSection div.c-mob_star{
-    top: -12vw;
+    top: -53px;
+    left: 50px;
 }
 
 #programSection div.c-container{
@@ -734,6 +734,12 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #programSection div.p-program__event{
+
+    display: none;
+}
+
+#programSection div.p-program__eventPC{
+    display:block;
     display: flex;
     justify-content: space-between;
     width: 988px;
@@ -742,57 +748,57 @@ div.c-mob_star.type img.c-starItemB{
     left: 143px;
 }
 
-#programSection div.p-program__event dl{
+#programSection div.p-program__eventPC dl{
     width: 482px;
 }
 
-#programSection div.p-program__event dt{
+#programSection div.p-program__eventPC dt{
     padding-bottom: 15px;
     text-align: center;
     font-size: 1.6rem;
     line-height: 1.625;
 }
 
-#programSection div.p-program__event dt.sat span{
+#programSection div.p-program__eventPC dt.sat span{
     color: #26b7e9;
 }
 
-#programSection div.p-program__event dt span{
+#programSection div.p-program__eventPC dt span{
     display: block;
     font-size: 2.4rem;
     line-height: 1.333;
 }
 
-#programSection div.p-program__event li[data-time="0.5"]{
+#programSection div.p-program__eventPC li[data-time="0.5"]{
     height: 65px;
 }
 
-#programSection div.p-program__event li[data-time="0.83"]{
+#programSection div.p-program__eventPC li[data-time="0.83"]{
     height: 107.9px;
 }
 
-#programSection div.p-program__event li[data-time="0.67"]{
+#programSection div.p-program__eventPC li[data-time="0.67"]{
     height: 87.1px;
 }
 
-#programSection div.p-program__event li[data-time="1.17"]{
+#programSection div.p-program__eventPC li[data-time="1.17"]{
     height: 152.1px;
 }
 
-#programSection div.p-program__event li[data-time="1.33"]{
+#programSection div.p-program__eventPC li[data-time="1.33"]{
     height: 172.9px;
 }
 
-#programSection div.p-program__event li[data-time="0.3"]{
+#programSection div.p-program__eventPC li[data-time="0.3"]{
     height: 39px;
 }
 
-#programSection div.p-program__event li a{
+#programSection div.p-program__eventPC li a{
     height: 100%;
     text-decoration: none;
 }
 
-#programSection div.p-program__event a div.p-program__eventBox{
+#programSection div.p-program__eventPC a div.p-program__eventBox{
     height: 100%;
     border-radius: 10px;
 }
@@ -803,12 +809,12 @@ div.c-mob_star.type img.c-starItemB{
     position: relative;
 }
 
-#programSection div.p-program__event li figure{
+#programSection div.p-program__eventPC li figure{
     position: relative;
     padding-left: 89px;
 }
 
-#programSection div.p-program__event li figure p.p-program__photo{
+#programSection div.p-program__eventPC li figure p.p-program__photo{
     width: 60px;
     border-radius: 4px;
     overflow: hidden;
@@ -818,22 +824,22 @@ div.c-mob_star.type img.c-starItemB{
     font-size: 0;
 }
 
-#programSection div.p-program__event li figure figcaption{
+#programSection div.p-program__eventPC li figure figcaption{
     padding: 11px 15px 0 0;
 }
 
-#programSection div.p-program__event li figure p.p-program__time{
+#programSection div.p-program__eventPC li figure p.p-program__time{
     font-size: 1.2rem;
     line-height: 1.75;
 }
 
-#programSection div.p-program__event li figure p.p-program__name{
+#programSection div.p-program__eventPC li figure p.p-program__name{
     font-size: 1.6rem;
     line-height: 1.303;
     padding: 0.13em 0;
 }
 
-#programSection div.p-program__event li figure p.p-program__category{
+#programSection div.p-program__eventPC li figure p.p-program__category{
     font-size: 1.2rem;
     line-height: 1.5;
 }
@@ -852,10 +858,10 @@ div.c-mob_star.type img.c-starItemB{
     visibility: hidden;
 }
 
-#programSection div.p-program__event li[data-close="0"] a::after{
+#programSection div.p-program__eventPC li[data-close="0"] a::after{
     visibility: visible;
 }
-#programSection div.p-program__event li a::after{
+#programSection div.p-program__eventPC li a::after{
     content: "";
     display: block;
     width: 100%;
@@ -868,33 +874,33 @@ div.c-mob_star.type img.c-starItemB{
     visibility: hidden;
 }
 
-#programSection div.p-program__event li a[data-hover="0"] div.p-program__eventBox,
-#programSection div.p-program__event li a[data-hover="0"] div.p-program__eventBox::after{
+#programSection div.p-program__eventPC li a[data-hover="0"] div.p-program__eventBox,
+#programSection div.p-program__eventPC li a[data-hover="0"] div.p-program__eventBox::after{
     background: #ddd;
 }
 
-#programSection div.p-program__event li a[data-hover="1"] div.p-program__eventBox,
-#programSection div.p-program__event li a[data-hover="1"] div.p-program__eventBox::after{
+#programSection div.p-program__eventPC li a[data-hover="1"] div.p-program__eventBox,
+#programSection div.p-program__eventPC li a[data-hover="1"] div.p-program__eventBox::after{
     background: #e6be40;
 }
 
-#programSection div.p-program__event li a[data-hover="2"] div.p-program__eventBox,
-#programSection div.p-program__event li a[data-hover="2"] div.p-program__eventBox::after{
+#programSection div.p-program__eventPC li a[data-hover="2"] div.p-program__eventBox,
+#programSection div.p-program__eventPC li a[data-hover="2"] div.p-program__eventBox::after{
     background: #69cf26;
 }
 
-#programSection div.p-program__event li a[data-hover="3"] div.p-program__eventBox,
-#programSection div.p-program__event li a[data-hover="3"] div.p-program__eventBox::after{
+#programSection div.p-program__eventPC li a[data-hover="3"] div.p-program__eventBox,
+#programSection div.p-program__eventPC li a[data-hover="3"] div.p-program__eventBox::after{
     background: #e878b3;
 }
 
-#programSection div.p-program__event li a[data-hover="4"] div.p-program__eventBox,
-#programSection div.p-program__event li a[data-hover="4"] div.p-program__eventBox::after{
+#programSection div.p-program__eventPC li a[data-hover="4"] div.p-program__eventBox,
+#programSection div.p-program__eventPC li a[data-hover="4"] div.p-program__eventBox::after{
     background: #00d1f7;
 }
 
 
-#programSection div.p-program__event dt.sun span{
+#programSection div.p-program__eventPC dt.sun span{
     color: #e92323;
 }
 
@@ -910,8 +916,8 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #ticketSection div.c-container>div.c-mob_star{
-    left: 75vw;
-    top: -6vw;
+    left: 96px;
+    top: -83px;
 }
 
 #ticketSection h2{
@@ -925,7 +931,7 @@ div.c-mob_star.type img.c-starItemB{
 
 #ticketSection h3.p-ticket__logo{
     width: 146px;
-    padding-top: 39px;
+    padding-top: 25px;
     margin: 0 auto;
     font-size: 0;
 }
@@ -973,18 +979,6 @@ div.c-mob_star.type img.c-starItemB{
     position: relative;
 }
 
-#ticketSection div.p-ticket__btn a p::after {
-    content: "";
-    display: block;
-    width: 14px;
-    height: 14px;
-    background: url(../img/openTab.svg) no-repeat 0 0/14px 14px;
-    position: absolute;
-    top: 50%;
-    margin-top: -7px;
-    right: -14px;
-}
-
 #accessSection{
     padding-top: 88px;
     position: relative;
@@ -994,11 +988,17 @@ div.c-mob_star.type img.c-starItemB{
 #accessSection::before{
     content: "";
     width: 100%;
-    height: 88px;
-    background: url(../img/access/bg_top.png) repeat-x 50% 0/1600px auto;
+    height: 13.333vw;
+    background: 0 0/150px 150px #65cd25;
     position: absolute;
     top: 0;
     left: 0;
+    clip-path: polygon(35% 28%, 54% 70%, 31% 123%, 81% 29%, 92% 67%, -5% 108%);
+}
+
+#accessSection div.c-mob_star{
+    top: -180px;
+    left: 0%;
 }
 
 #accessSection div.l-accessContent {
@@ -1041,9 +1041,12 @@ div.c-mob_star.type img.c-starItemB{
     font-size: 0;
 }
 
+#accessSection .p-access__textImg{
+    width: 370px;
+}
+
 #accessSection div.p-access__text figcaption{
     font-size: 1.6rem;
-    margin-top: 37px;
 }
 
 #accessSection div.p-access__text p.p-access__link{
@@ -1090,11 +1093,13 @@ div.c-mob_star.type img.c-starItemB{
 #noteSection::before{
     content: "";
     width: 100%;
-    height: 138px;
-    background: url(../img/notes/bg_top.png) repeat-x 50% 0/1600px auto;
+    height: 170px;;
+    background: 0 0/150px 150px #00badc;
     position: absolute;
     top: 0;
     left: 0;
+    clip-path: circle(165% at 50% 897%);
+
 }
 
 #noteSection div.l-noteContent{
@@ -1106,10 +1111,8 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #noteSection div.c-mob_star{
-    transform: scale(0.84);
-    top: -10.667vw;
-    left: 50%;
-    margin-left: -13.133vw;
+    top: -197px;
+    left: 45%;
 }
 
 #noteSection div.c-container{
@@ -1139,10 +1142,19 @@ div.c-mob_star.type img.c-starItemB{
 
 #noteSection .p-note figure>div{
     width: 260px;
+    height: 260px;
     border-radius: 130px;
     overflow: hidden;
     font-size: 0;
     margin: 0 auto;
+    background-color: #00ccff;
+    text-align: center;
+}
+
+#noteSection .p-note figure img{
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
 }
 
 #noteSection .p-note figcaption{
@@ -1166,9 +1178,8 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #contactSection div.c-mob_star{
-    top: -18vw;
-    left: 11%;
-    margin-left: -10vw;
+    top: -138px;
+    left: 3%;
 }
 
 #contactSection::before{
@@ -1243,15 +1254,6 @@ div.c-mob_star.type img.c-starItemB{
     text-align: center;
     font-size: 2.4rem;
     z-index: 1;
-}
-
-#contactSection div.p-contact__btn a p::after {
-    content: "";
-    width: 18px;
-    display: inline-block;
-    height: 1em;
-    margin-left: 0.5em;
-    background: url(../img/openTab.svg) no-repeat 0 100%/18px 18px;
 }
 
 .hoverType_a div.c-box::after, .hoverType_d div.c-box::after{
@@ -1345,23 +1347,12 @@ div.c-mob_star.type img.c-starItemB{
     text-decoration: none;
 }
 
-#footer li a.p-footer__openTab::after {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 1em;
-    background: url(../img/openTab.svg) no-repeat 0 100%/12px 12px;
-    margin-left: .7em;
-}
-
 #footer li div.c-mob_star.type{
-    top: -1vw;
-    left: -1.5vw;
-    width: 6vw;
-    height: 6vw;
+    top: 5px;
+    left: -10px;
 }
 
 #footer li div.c-mob_star.type img{
-    width: 6vw;
-    height: 6vw;
+    width: 25px;
+    height: 25px;
 }
