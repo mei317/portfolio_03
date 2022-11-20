@@ -58,6 +58,15 @@ img {
         top: 2.5px;
     }
 
+    .u-external-link__b{
+        position: absolute;
+        color: #fff;
+        width: 23px;
+        content: "";
+        top: 13px;
+        left: 75%;
+    }
+
     .u-external-link__c{
         color: #fff;
         width: 14px;

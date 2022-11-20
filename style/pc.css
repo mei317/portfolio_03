@@ -952,12 +952,6 @@ div.c-mob_star.type img.c-starItemB{
     margin-top: 21px;
 }
 
-#ticketSection div.p-ticket__btn::before,
-#ticketSection div.p-ticket__btn::after{
-    content: "";
-    flex-grow: 1;
-}
-
 #ticketSection div.p-ticket__btn a{
     text-decoration: none;
 }
@@ -1073,11 +1067,14 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #accessSection div.p-access__text div.c-mob_star{
-    transform: scale(0.32);
-    transform-origin: 0 50%;
-    top: 50%;
-    left: -10px;
-    margin-top: -10.5vw;
+    top: -2px;
+    left: -5%;
+}
+
+#accessSection div.p-access__text div.c-mob_star .c-starItemA{
+    left: 0;
+    width: 30px;
+    height: 30px;
 }
 
 #noteSectionSP{
@@ -1178,18 +1175,19 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #contactSection div.c-mob_star{
-    top: -138px;
+    top: -170px;
     left: 3%;
 }
 
 #contactSection::before{
     content: "";
     width: 100%;
-    height: 50px;
-    background: url(../img/contact/bg_top.png) repeat-x 50% 0/1600px auto;
+    height: 13.333vw;
+    background: 0 0/150px 150px #fff;
     position: absolute;
-    top: 50px;
+    top: 0;
     left: 0;
+    clip-path: polygon(43% 8%, 76% 99%, 50% 129%, 103% 10%, 100% 250%, -19% 68%);
 }
 
 #contactSection div.l-contactContent{
