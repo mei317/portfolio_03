@@ -487,6 +487,11 @@ div.c-mob_star.type img.c-starItemB{
     margin: 1vw auto;
 }
 
+#comedianSection li p.p-comedian__imagePhoto img{
+    width: 192px;
+    height: 192px;
+}
+
 #comedianSection li div.p-comedian__image.area img{
     width: 100%;
     height: auto;

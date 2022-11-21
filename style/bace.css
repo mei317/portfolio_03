@@ -50,6 +50,12 @@ img {
         color: #fff;
     }
 
+    .u-twitter:hover,
+    .u-instagram:hover{
+        color: #000;
+        transition-duration: 0.3s;
+    }
+
     .u-external-link__a{
         position: absolute;
         color: #fff;
