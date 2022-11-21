@@ -594,11 +594,8 @@ div.c-mob_star.type img.c-starItemB{
     font-size: 1.2rem;
 }
 /* ------------------------------- */
-#comedianSection li div.c-hoverBox{
-    padding-top: 170px;
-}
-
 .c-hoverType_ax div.c-hoverBox{
+    padding-top: 170px;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -606,18 +603,14 @@ div.c-mob_star.type img.c-starItemB{
     top: 0;
     left: 0;
     mix-blend-mode: multiply;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .c-hoverType_ax div.c-hoverBox:hover{
     width: 100%;
     height: 100%;
-    /* position: absolute;
-    top: 0;
-    left: 0; */
-    mix-blend-mode: multiply;
     display: block;
-    visibility: visible;
+    opacity: 1;
 }
 
 #comedianSection li div.c-hoverBox::before{
@@ -628,6 +621,7 @@ div.c-mob_star.type img.c-starItemB{
     position: absolute;
     top: 0;
     left: 0;
+    display: block;
 }
 
 #comedianSection li div.c-hoverBox::after{
@@ -636,6 +630,7 @@ div.c-mob_star.type img.c-starItemB{
     height: 100%;
     border-radius: 20px;
     margin-left: 20px;
+    display: block;
 }
 /* --------------------------------- */
 
