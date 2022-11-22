@@ -43,8 +43,6 @@ body{
 #comedianSection h2,
 #aboutSection h2 {
     overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
 }
 
 body #topWrap nav{
@@ -427,26 +425,13 @@ div.c-mob_star.type img.c-starItemB{
     right: 30px;
 }
 
-#accessSection h2,
-#ticketSection h2,
-#programSection h2,
-#floorSection h2,
-#comedianSection h2,
-#aboutSection h2 {
-    background: no-repeat 0 0/contain;
+#aboutSection .c-titleScroll{
     position: absolute;
-    transform: scale(0);
-}
-
-#aboutSection h2{
     width: 266px;
     height: 163px;
     top: -199px;
     left: 79px;
-    background-image: url(../img/about/title.svg);
-    transform-origin: 100% 100%;
 }
-
 
 #aboutSection p.p-aboutTextSP{
     display: none;
@@ -511,21 +496,20 @@ div.c-mob_star.type img.c-starItemB{
 #comedianSection div.c-container{
     border-radius: 40px;
     padding: 80px 15px 10px 35px;
-    background: url(../img/bg_green_rough.png) repeat 0 0/300px 300px #65cd25;
+    background: 0 0/300px 300px #65cd25;
 }
 
 #comedianSection div.c-mob_star{
     top: -4vw;
+    left: 50%;
 }
 
-#comedianSection h2{
-    width: 378px;
-    height: 153px;
-    top: -83px;
-    left: 50%;
-    margin-left: 72px;
-    background-image: url(../img/artists/title.svg);
-    transform-origin: 0 100%;
+#comedianSection .c-titleScroll{
+    position: absolute;
+    width: 329px;
+    height: 136px;
+    top: -66px;
+    left: 66%;
 }
 
 #comedianSection ul{
@@ -711,23 +695,22 @@ div.c-mob_star.type img.c-starItemB{
 
 #programSection div.c-mob_star{
     top: -53px;
-    left: 50px;
+    left: 50%;
 }
 
 #programSection div.c-container{
     width: 1200px;
     padding: 109px 0 82px;
     border-radius: 40px;
-    background: url(../img/bg_white.png) repeat 0 0/300px 300px #fafafa;
+    background: 0 0/300px 300px #fafafa;
 }
 
-#programSection h2{
-    width: 402px;
-    height: 140px;
-    top: -72px;
+#programSection .c-titleScroll{
+    position: absolute;
+    width: 329px;
+    height: 134px;
+    top: -84px;
     left: 103px;
-    background-image: url(../img/program/title.svg);
-    transform-origin: 100% 100%;
 }
 
 #programSection div.p-program__time{
@@ -886,6 +869,7 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #programSection div.p-program__eventPC li figure figcaption{
+    text-align: left;
     padding: 11px 15px 0 0;
 }
 
@@ -978,17 +962,16 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #ticketSection div.c-container>div.c-mob_star{
-    left: 96px;
-    top: -83px;
+    left: 116px;
+    top: -62px;
 }
 
-#ticketSection h2{
-    width: 261px;
-    height: 125px;
+#ticketSection .c-titleScroll{
+    position: absolute;
+    width: 293px;
+    height: 171px;
     top: -38px;
-    left: -132px;
-    background-image: url(../img/tickets/title.svg);
-    transform-origin: 100% 100%;
+    left: -170px;
 }
 
 #ticketSection h3.p-ticket__logo{
@@ -1068,17 +1051,16 @@ div.c-mob_star.type img.c-starItemB{
     min-height: 623px;
     padding: 125px 0 218px;
     position: relative;
-    background: url(../img/bg_green_rough.png) repeat 0 0/300px 300px #65cd25;
+    background:0 0/300px 300px #65cd25;
     color: #fff;
 }
 
-#accessSection h2{
-    width: 320px;
-    height: 98px;
-    top: -154px;
-    left: 113px;
-    background-image: url(../img/access/title.svg);
-    transform-origin: 100% 0;
+#accessSection .c-titleScroll{
+    position: absolute;
+    width: 303px;
+    height: 130px;
+    top: -208px;
+    left: 150px;
 }
 
 #accessSection div.p-access__map{
@@ -1101,10 +1083,14 @@ div.c-mob_star.type img.c-starItemB{
     width: 600px;
     padding-left: 128px;
     font-size: 0;
+    position: absolute;
+    top: -60px;
 }
 
 #accessSection .p-access__textImg{
-    width: 370px;
+    font-size:70px;
+    font-weight: 900;
+    color: #fff;
 }
 
 #accessSection div.p-access__text figcaption{
@@ -1136,7 +1122,7 @@ div.c-mob_star.type img.c-starItemB{
 
 #accessSection div.p-access__text div.c-mob_star{
     top: -2px;
-    left: -5%;
+    left: 20%;
 }
 
 #accessSection div.p-access__text div.c-mob_star .c-starItemA{
@@ -1344,6 +1330,7 @@ div.c-mob_star.type img.c-starItemB{
     background-color: #e878b3;
 }
 
+/* フッター */
 
 #footerSP{
     display: none;
@@ -1414,14 +1401,16 @@ div.c-mob_star.type img.c-starItemB{
     text-decoration: none;
 }
 
-#footer .p-footer__logo img{
-    width: 50%;
-    height: auto;
-    display: block;
-    margin-left: 30px;
+#footer .p-footer__textImg{
+    font-size:20px;
+    font-weight: 900;
+    color: #fff;
+    text-align: left;
+    line-height: 1.8;
+    margin-left: 2.4vw;
 }
 
-#footer .p-footer__logo img:hover{
+#footer .p-footer__textImg:hover{
     opacity: 0.5;
 }
 
