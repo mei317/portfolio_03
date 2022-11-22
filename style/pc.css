@@ -1,4 +1,5 @@
 html{
+    width: 100%;
     font-size: 62.5%;
 }
 
@@ -8,12 +9,8 @@ body{
     font-weight: 400;
     line-height: 2;
     font-family: "Noto Sans JP",-apple-system,BlinkMacSystemFont,"Yu Gothic",YuGothic,"ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     -webkit-text-size-adjust: 100%;
-}
-
-body #topWrap header{
-    transform: translateY(-80px);
 }
 
 #topWrap header{
@@ -22,7 +19,7 @@ body #topWrap header{
     left: 15px;
 }
 
-#topWrap #newsPC,
+#topWrap #news,
 #topWrap div.p-topWrap__bannerPC,
 #topWrap nav,
 #topWrap header{
@@ -30,15 +27,14 @@ body #topWrap header{
 }
 
 #comedianSlide ul.sns a,
-#footer div.p-footer__logo p a,
-#footer div.p-footer__logo h1,
-#footerSP div.p-footer__logo p a,
-#footerSP div.p-footer__logo h1,
+/* #footer div.p-footer__logo p a,
+#footer div.p-footer__logo h1, */
+/* #footerSP div.p-footer__logo p a,
+#footerSP div.p-footer__logo h1, */
 #floorSection #floorSlide div.swiper-slide h3,
-#titleSection nav ul.lang li a,
-#titleSection nav ul.lang li span,
-#titleSection h1, #topWrap div.p-topWrap__banner.ar div.c-box, #topWrap nav li a,
-#topWrap header h1,
+/* #titleSection nav ul.lang li a,
+#titleSection nav ul.lang li span, */
+/* #titleSection h1, #topWrap div.p-topWrap__banner.ar div.c-box, #topWrap nav li a, */
 #accessSection h2,
 #ticketSection h2,
 #programSection h2,
@@ -49,12 +45,6 @@ body #topWrap header{
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
-}
-
-#topWrap header h1{
-    height: 45px;
-    width: 185px;
-    background: url(../img/logo_jp.svg) no-repeat 0 0/contain;
 }
 
 body #topWrap nav{
@@ -108,14 +98,10 @@ body #topWrap nav{
     bottom: 50px;
 }
 
-#topWrap div.p-topWrap__bannerPC.ar a,
+#topWrap div.p-topWrap__banner.ar a,
 #topWrap div.p-topWrap__banner.ar div.cs{
     width: 179px;
     height: 180px;
-}
-
-#topWrap div.p-topWrap__bannerPC{
-    background: url(../img/bg_white.png) no-repeat 50% 50%/1px 1px;
 }
 
 .c-hoverType_a,
@@ -168,7 +154,6 @@ body #topWrap nav{
 .c-hoverType_a[data-hover="1"] div.c-box::after,
 .c-hoverType_ax[data-hover="1"] div.c-hoverBox::before,
 .c-hoverType_ax[data-hover="1"] div.c-hoverBox::after,
-.c-hoverType_b[data-hover="1"]:hover,
 .c-hoverType_d[data-hover="1"] div.c-box::after{
     background: #00d1f7;
 }
@@ -176,7 +161,6 @@ body #topWrap nav{
 .c-hoverType_a[data-hover="2"] div.c-box::after,
 .c-hoverType_ax[data-hover="2"] div.c-hoverBox::before,
 .c-hoverType_ax[data-hover="2"] div.c-hoverBox::after,
-.c-hoverType_b[data-hover="2"]:hover,
 .c-hoverType_d[data-hover="2"] div.c-box::after{
     background: #e6be40;
 }
@@ -184,7 +168,6 @@ body #topWrap nav{
 .c-hoverType_a[data-hover="3"] div.c-box::after,
 .c-hoverType_ax[data-hover="3"] div.c-hoverBox::before,
 .c-hoverType_ax[data-hover="3"] div.c-hoverBox::after,
-.c-hoverType_b[data-hover="3"]:hover,
 .c-hoverType_d[data-hover="3"] div.c-box::after{
     background: #69cf26;
 }
@@ -192,7 +175,6 @@ body #topWrap nav{
 .c-hoverType_a[data-hover="4"] div.c-box::after,
 .c-hoverType_ax[data-hover="4"] div.c-hoverBox::before,
 .c-hoverType_ax[data-hover="4"] div.c-hoverBox::after,
-.c-hoverType_b[data-hover="4"]:hover,
 .c-hoverType_d[data-hover="4"] div.c-box::after{
     background: #e878b3;
 }
@@ -208,6 +190,7 @@ body #topWrap nav{
     position: fixed;
     right: 10px;
     bottom: 50px;
+    background-color: #fff;
 }
 
 #topWrap div.p-topWrap__bannerPC.ticket a{
@@ -247,20 +230,19 @@ body #topWrap nav{
 
 #topWrap div.p-topWrap__bannerPC.ticket div.c-box>div::before{
     height: 100%;
-    background: url(../img/fix/banner_ticket_logo.svg) no-repeat 100% 50%/contain;
+    background: url(../img/logo.png) no-repeat 100% 50%/contain;
     width: 33px;
     left: 6px;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div::after {
+#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div::after{
     width: 10px;
     height: 100%;
     border-left: 2px solid #57ab48;
     right: 0;
-    background: url(../img/fix/banner_ticket_text.svg) no-repeat 50% 50%/auto 40px;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div span {
+#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div span{
     padding: 0 13px 0 44px;
 }
 
@@ -274,12 +256,6 @@ body #topWrap nav{
 }
 
 #topWrap #news{
-    display: none;
-}
-
-
-#topWrap #newsPC{
-    display: block;
     width: 100%;
     height: 40px;
     position: fixed;
@@ -289,23 +265,20 @@ body #topWrap nav{
     background: #000;
 }
 
+/* ニュースバー */
+
 #topWrap #newsBar{
     display: flex;
     height: 100%;
-}
-
-#topWrap #newsBar div.p-topWrap__newsBar__Contents>div{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    width: 280vw;
+    overflow: hidden;
 }
 
 #topWrap #newsBar p{
-    padding: 0 50px 0 43px;
+    padding-left: 30px;
     font-size: 1.4rem;
     line-height: 2.857;
     color: #fff;
-    white-space: nowrap;
     position: relative;
 }
 
@@ -313,17 +286,14 @@ body #topWrap nav{
     content: "";
     display: block;
     width: 35px;
-    height: 18px;
+    height: 35px;
     position: absolute;
     left: 0;
-    bottom: 11px;
-    background: url(../img/eyes/icon.svg) no-repeat 0 100%/35px 18px;
-    animation: 3s -2s linear infinite eyes_blink;
+    bottom: 4px;
+    background: url(./../img/star02.png) no-repeat 0 100%/30px 30px;
 }
 
-#topWrap #newsBar div.p-topWrap__newsBar__Contents{
-	overflow: hidden;
-}
+/* -------------------------------- */
 
 #mainWrap{
 	width: 100%;
@@ -334,6 +304,9 @@ body #topWrap nav{
     position: relative;
 }
 
+/* タイトル */
+
+    /* フェードイン*/
 #titleSection{
     height: 100vh;
     min-height: 500px;
@@ -344,16 +317,46 @@ body #topWrap nav{
     width: 1280px;
     margin: 0 auto;
     position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease 1s 1 normal backwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #titleSection h1{
-    width: 100%;
-    padding-top: 40px;
-    transform: translateY(-200px);
-    transition: transform 0s 0s cubic-bezier(0.22, 1, 0.36, 1);
-    height: 188px;
-    background: url(../img/title/logo_jp.png) no-repeat 50% 100%/1275px 148px;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 11.5rem;
+    font-weight: 200;
+    color: #fff;
+    margin-bottom: -126px;
 }
+
+#titleSection p{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 9.5rem;
+    font-weight: 200;
+    color: #fff;
+    margin-bottom: -76px;
+}
+
+#titleSection span{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 3.77rem;
+    font-weight: 100;
+    color: #fff;
+    margin-top: 0;
+}
+
+/* ------------------------------------ */
 
 #aboutSection{
     width: 100%;
@@ -1282,7 +1285,7 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 .hoverType_a, .hoverType_ax,
-.hoverType_b, .hoverType_d{
+.c-hoverType_b, .hoverType_d{
     display: block;
     position: relative;
 }
@@ -1357,11 +1360,7 @@ div.c-mob_star.type img.c-starItemB{
     padding: 61px 40px 68px;
 }
 
-#footer .hoverType_b:not(:hover){
-    background: #fff;
-}
-
-#footer .hoverType_b{
+#footer .c-hoverType_b{
     width: 64px;
     height: 64px;
     border-radius: 50px;
@@ -1370,9 +1369,10 @@ div.c-mob_star.type img.c-starItemB{
     right: 40px;
     z-index: 1;
     cursor: pointer;
+    background-color: #ddd;
 }
 
-#footer .hoverType_b::before {
+#footer .c-hoverType_b::before{
     content: "";
     display: block;
     width: 26px;
@@ -1380,27 +1380,52 @@ div.c-mob_star.type img.c-starItemB{
     position: absolute;
     top: 16px;
     left: 19px;
-    background: url(../img/btn_arrow.svg) no-repeat 100% 50%/26px 32px;
+    background: url(../img/footer.png) no-repeat 100% 50%/26px 32px;
     transform: rotate(-90deg);
 }
 
-#footer div.p-footer__logo h1{
-    width: 250px;
-    height: 69px;
-    background: url(../img/logo_jp.svg) no-repeat 0 100%/contain;
+/* フッターロゴ */
+#footer .p-footer__logo{
+    width: 350px;
+    position: relative;
 }
 
-#footer div.p-footer__logo p {
-    margin-top: 32px;
+#footer .p-footer__logoText{
+    width: 100%;
+    position: relative;
 }
 
-#footer div.p-footer__logo p a{
+#footer .p-footer__logo a{
+    text-decoration: none;
+}
+
+#footer .p-footer__logoText h1{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2.7rem;
+    font-weight: 250;
+    color: #fff;
+    margin-bottom: -28px;
+}
+
+#footer .p-footer__logoText p{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2.2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer .p-footer__logo img{
+    width: 50%;
+    height: auto;
     display: block;
-    width: 100px;
-    height: 18px;
-    font-size: 0;
-    background: url(../img/footer/whatever.svg) no-repeat 0 0/contain;
+    margin-left: 30px;
 }
+
+#footer .p-footer__logo img:hover{
+    opacity: 0.5;
+}
+
+/* --------------------------------- */
 
 #footer li {
     padding: 8px 0 8px 23px;

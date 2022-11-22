@@ -64,10 +64,6 @@ body #topWrap #newsPC{
     transform: translateY(50px);
 }
 
-#topWrap #newsBar div.p-topWrap__newsBar__Contents.start{
-    animation: 0s 0s linear infinite marquee;
-}
-
 body[data-mode=loaded] #titleSection h1{
     transition-duration: .8s;
     transform: none;
