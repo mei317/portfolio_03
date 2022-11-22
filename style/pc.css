@@ -189,7 +189,20 @@ body #topWrap nav{
     right: 10px;
     bottom: 50px;
     background-color: #fff;
+    animation: slideRight 0.3s ease 1s 1 normal backwards;
 }
+
+@keyframes slideRight{
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 #topWrap div.p-topWrap__bannerPC.ticket a{
     width: 184px;
@@ -253,6 +266,42 @@ body #topWrap nav{
     left: 0;
 }
 
+.c-hoverType_a div.c-hoverStar,
+.c-hoverType_ax div.c-hoverStar,
+.c-hoverType_b div.c-hoverStar,
+.c-hoverType_d div.c-hoverStar{
+    width: 57px;
+    height: 57px;
+    background: url(./../img/hoverStar.png) no-repeat 0 0/57px 58px;
+    position: absolute;
+    top: -28px;
+    left: 69%;
+    margin-left: -98.5px;
+    transform-origin: 50% 50%;
+    pointer-events: none;
+    z-index:90;
+    opacity: 0;
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        transform:scale3d(0,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        transform:scale3d(1,1,1);
+    }
+}
+
+
 #topWrap #news{
     width: 100%;
     height: 40px;
@@ -304,7 +353,7 @@ body #topWrap nav{
 
 /* タイトル */
 
-    /* フェードイン*/
+    /* スライドイン*/
 #titleSection{
     height: 100vh;
     min-height: 500px;
@@ -316,10 +365,10 @@ body #topWrap nav{
     margin: 0 auto;
     position: relative;
     text-align: center;
-    animation: fadeIn 0.3s ease 1s 1 normal backwards;
+    animation: slideIn 0.3s ease 1s 1 normal backwards;
 }
 
-@keyframes fadeIn {
+@keyframes slideIn{
     from {
         opacity: 0;
         transform: translateY(-30px);
@@ -380,7 +429,7 @@ body #topWrap nav{
     position: absolute;
     top: 0;
     left: 0;
-    clip-path: polygon(14% 27%, 45.6% 13%, 47.333% 94%, 79% 25%, 100% 54%, 0% 100%);
+    clip-path: polygon(14% 27%, 45.6% 13%, 47.333% 94%, 79% 25%, 100% 86%, 0% 100%);
 }
 
 #aboutSection::after {
@@ -425,12 +474,36 @@ div.c-mob_star.type img.c-starItemB{
     right: 30px;
 }
 
+/* セクションタイトル */
+
 #aboutSection .c-titleScroll{
     position: absolute;
     width: 266px;
     height: 163px;
     top: -199px;
     left: 79px;
+}
+
+.c-titleScroll {
+    opacity: 0;
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        transform:scale3d(0,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        transform:scale3d(1,1,1);
+    }
 }
 
 #aboutSection p.p-aboutTextSP{
@@ -1095,6 +1168,8 @@ div.c-mob_star.type img.c-starItemB{
 
 #accessSection div.p-access__text figcaption{
     font-size: 1.6rem;
+    text-align: left;
+    margin-left: 7vw;
 }
 
 #accessSection div.p-access__text p.p-access__link{
@@ -1126,7 +1201,7 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #accessSection div.p-access__text div.c-mob_star .c-starItemA{
-    left: 0;
+    left: -50%;
     width: 30px;
     height: 30px;
 }
