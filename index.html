@@ -31,7 +31,10 @@
 		<div class="l-topPoint" id="topPoint"></div>
 		<div class="l-topWrap" id="topWrap">
 			<header>
-				<!-- <h1>お笑い<br>サマーフェス</h1> -->
+				<a href="#"><div class="c-logoText">
+					<h1>お笑いウィンターフェス</h1>
+					<p>OWARAIWINTERFES</p>
+				</div></a>
 			</header>
 			<nav>
 				<div class="p-topWrap__sns">
@@ -83,9 +86,7 @@
 								<img src="./img/bgMain.png">
 							</div>
 						</div>
-
 					</div>
-
 					<div class="c-bgBox front">
 						<div class="p-front bg_1">
 							<div class="p-frontImage">
@@ -1295,7 +1296,7 @@
 				<div class="c-container">
 					<div class="c-hoverType_b"></div>
 					<div class="p-footer__logo">
-						<a href="#"><div class="p-footer__logoText">
+						<a href="#"><div class="c-logoText">
 							<h1>お笑いウィンターフェス</h1>
 							<p>OWARAIWINTERFES</p>
 						</div></a>
@@ -1360,7 +1361,8 @@
 		</script>
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script src="js/jquery.marquee.js" type="text/javascript"></script>
-		<script>
+		<script src="js/nicetooltip.js" type="text/javascript"></script>
+		<script type="text/javascript">
 			// フッター文字流す
 				$('.marquee').marquee({
 					duration: 10000,
@@ -1369,18 +1371,35 @@
 					duplicated: true,
 					pauseSpeed: 0
 				});
-		</script>
-		<script type="text/javascript">
+			// ツールチップ
+			$(function(){
+				$('.p-topWrap__mask').niceTooltip({
+					HTML: "新型コロナウィルス感染症対策ガイドライン",
+				});
+			});
 			// チケットスライドイン
 			$(window).scroll(function () {
-				const wHeight = $(window).height();
-				const scrollAmount = $(window).scrollTop();
+				var wHeight = $(window).height();
+				var scrollAmount = $(window).scrollTop();
 				$('.p-topWrap__bannerPC').each(function () {
-					const targetPosition = $('#topPoint').offset().top;
-					if(scrollAmount > targetPosition - wHeight + 100){
-						$('.p-topWrap__bannerPC').addClass('ticket');
+					var targetPosition = $('#aboutSection').offset().top;
+					if(scrollAmount > targetPosition - wHeight + 50) {
+						$('.p-topWrap__bannerPC').removeClass('ticketIn');
+						$('.p-topWrap__bannerPC').addClass('ticketOut');
+					}else{
+						$('.p-topWrap__bannerPC').removeClass('ticketOut');
+						$('.p-topWrap__bannerPC').addClass('ticketIn');
+					}
+				});
+			});
+
+			// ヘッダースライドイン
+			$(function(){
+				$(window).on('scroll', function(){
+					if ($(window).scrollTop() > 200) {
+					$('#topWrap .c-logoText').slideDown(100);
 					} else {
-						$('.p-topWrap__bannerPC').removeClass('ticket');
+					$('#topWrap .c-logoText').slideUp(100);
 					}
 				});
 			});

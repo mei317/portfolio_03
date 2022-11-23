@@ -15,8 +15,30 @@ body{
 
 #topWrap header{
     position: fixed;
+    width: 350px;
     top: 15px;
     left: 15px;
+}
+
+#topWrap .c-logoText{
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+
+#topWrap .c-logoText h1{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2.7rem;
+    font-weight: 250;
+    color: #fff;
+    margin-bottom: -28px;
+}
+
+#topWrap .c-logoText p{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2.2rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 #topWrap #news,
@@ -183,6 +205,7 @@ body #topWrap nav{
     display: none;
 }
 
+/* チケットスライドイン */
 #topWrap div.p-topWrap__bannerPC{
     display: block;
     width: 184px;
@@ -193,13 +216,32 @@ body #topWrap nav{
     background-color: #fff;
 }
 
-.ticket{
-    animation: slideRight 0.3s ease 1s 1 normal backwards;
+#topWrap .ticketOut{
+    animation: ticketOut 0.5s forwards;
 }
 
-.ticketOut{
-    animation: slideLeft 0.3s ease 1s 1 normal backwards;
+@keyframes ticketOut{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(350px);
+    }
 }
+
+#topWrap .ticketIn {
+    animation: ticketIn 0.5s forwards;
+}
+
+@keyframes ticketIn{
+    from {
+        transform: translateX(350px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+/* ------------------------------------ */
 
 @keyframes slideRight{
     from {
@@ -209,17 +251,6 @@ body #topWrap nav{
     to {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes slideLeft{
-    from {
-        opacity: 0;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(30PX);
     }
 }
 
@@ -319,6 +350,25 @@ body #topWrap nav{
         transform:scale3d(1,1,1);
     }
 }
+
+/* .fadeOut{
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut{
+    0% {
+        opacity: 1;
+        transform:scale3d(1,1,1);
+    }
+
+    100% {
+        opacity: 0;
+        transform:scale3d(0,0,0);
+
+    }
+} */
 
 
 #topWrap #news{
@@ -636,6 +686,12 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     animation: slideIn 0.3s ease 1s 1 normal backwards;
 }
 
+.slideIn{
+    animation-name: slideOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
 @keyframes slideIn{
     from {
         opacity: 0;
@@ -646,6 +702,24 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
         transform: translateY(0);
     }
 }
+
+.slideOut{
+    animation-name: slideOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideOut{
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
 
 #titleSection h1{
     font-family: 'Dela Gothic One', cursive;
@@ -1723,16 +1797,16 @@ div.c-mob_star.type img.c-starItemB{
     position: relative;
 }
 
-#footer .p-footer__logoText{
-    width: 100%;
-    position: relative;
-}
-
 #footer .p-footer__logo a{
     text-decoration: none;
 }
 
-#footer .p-footer__logoText h1{
+#footer .c-logoText{
+    width: 100%;
+    position: relative;
+}
+
+#footer .c-logoText h1{
     font-family: 'Dela Gothic One', cursive;
     font-size: 2.7rem;
     font-weight: 250;
@@ -1740,7 +1814,7 @@ div.c-mob_star.type img.c-starItemB{
     margin-bottom: -28px;
 }
 
-#footer .p-footer__logoText p{
+#footer .c-logoText p{
     font-family: 'Dela Gothic One', cursive;
     font-size: 2.2rem;
     color: #fff;
