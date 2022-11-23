@@ -34,7 +34,9 @@ body{
 #floorSection #floorSlide div.swiper-slide h3,
 /* #titleSection nav ul.lang li a,
 #titleSection nav ul.lang li span, */
-/* #titleSection h1, #topWrap div.p-topWrap__banner.ar div.c-box, #topWrap nav li a, */
+/* #titleSection h1,
+#topWrap div.p-topWrap__banner.ar div.c-box,
+#topWrap nav li a, */
 #accessSection h2,
 #ticketSection h2,
 #programSection h2,
@@ -177,11 +179,11 @@ body #topWrap nav{
     background: #e878b3;
 }
 
-#topWrap div.p-topWrap__banner.ticket{
+#topWrap div.p-topWrap__banner{
     display: none;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket{
+#topWrap div.p-topWrap__bannerPC{
     display: block;
     width: 184px;
     height: 58px;
@@ -189,7 +191,14 @@ body #topWrap nav{
     right: 10px;
     bottom: 50px;
     background-color: #fff;
+}
+
+.ticket{
     animation: slideRight 0.3s ease 1s 1 normal backwards;
+}
+
+.ticketOut{
+    animation: slideLeft 0.3s ease 1s 1 normal backwards;
 }
 
 @keyframes slideRight{
@@ -203,15 +212,25 @@ body #topWrap nav{
     }
 }
 
+@keyframes slideLeft{
+    from {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(30PX);
+    }
+}
 
-#topWrap div.p-topWrap__bannerPC.ticket a{
+#topWrap div.p-topWrap__bannerPC a{
     width: 184px;
     height: 58px;
     text-decoration: none;
     font-weight: 500;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box{
+#topWrap div.p-topWrap__bannerPC div.c-box{
     padding: 0 2.933vw 0 11.733vw;
     position: relative;
     padding: 4px;
@@ -223,7 +242,7 @@ body #topWrap nav{
     line-height: 1.25;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div{
+#topWrap div.p-topWrap__bannerPC div.c-box>div{
     display: flex;
     height: 100%;
     align-items: center;
@@ -232,32 +251,32 @@ body #topWrap nav{
     position: relative;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div::before,
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div::after {
+#topWrap div.p-topWrap__bannerPC div.c-box>div::before,
+#topWrap div.p-topWrap__bannerPC div.c-box>div::after {
     content: "";
     display: block;
     position: absolute;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div::before{
+#topWrap div.p-topWrap__bannerPC div.c-box>div::before{
     height: 100%;
     background: url(../img/logo.png) no-repeat 100% 50%/contain;
     width: 33px;
     left: 6px;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div::after{
+#topWrap div.p-topWrap__bannerPC div.c-box>div::after{
     width: 10px;
     height: 100%;
     border-left: 2px solid #57ab48;
     right: 0;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box>div span{
+#topWrap div.p-topWrap__bannerPC div.c-box>div span{
     padding: 0 13px 0 44px;
 }
 
-#topWrap div.p-topWrap__bannerPC.ticket div.c-box::before{
+#topWrap div.p-topWrap__bannerPC div.c-box::before{
     width: 100%;
     height: 100%;
     border: 0.267vw solid #57ab48;
@@ -351,6 +370,255 @@ body #topWrap nav{
     position: relative;
 }
 
+/* 背景画像 */
+#mainBG{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 0;
+}
+
+#bgContainer{
+    width: 2400px;
+    height: 1340px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1200px;
+    transform-origin: 50% 0;
+    transform: scale(1.41);
+}
+
+body[data-mode=loaded] #mainBG div.c-bgBox.back{
+    animation: .6s .1s cubic-bezier(0.22, 1, 0.36, 1) 1 mainView both;
+}
+
+body[data-mode=loaded] #mainBG div.c-bgBox{
+    transform: translate(0, 0);
+}
+#mainBG div.c-bgBox{
+    width: 2400px;
+    height: 1340px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1200px;
+    transform: translate(0, 1340px);
+}
+
+/* body[data-mode=loaded][data-move=play] #mainBG div.p-back,
+body[data-mode=loaded][data-move=play] #mainBG div.p-front{
+    transform: translateY(0) !important;
+} */
+
+#mainBG div.p-back,
+#mainBG div.p-front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -1.4vw;
+    left: 0;
+}
+
+.positionA{
+    animation-name: positionA;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes positionA{
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-200px);
+    }
+}
+
+.positionB{
+    animation-name: positionB;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes positionB{
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-200px);
+    }
+}
+
+.positionC{
+    animation-name: positionC;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes positionC{
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+body[data-scroll=""] #mainBG div.p-backImage,
+body[data-scroll=top] #mainBG div.p-backImage{
+    top: 109px;
+}
+
+#mainBG div.p-backImage{
+    width: 920px;
+    position: absolute;
+    top: -40px;
+    left: 754px;
+    transition: top .5s 0s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#mainBG div.p-back img,
+#mainBG div.p-front img{
+    width: 100%;
+    height: auto;
+}
+
+body[data-mode=loaded] #mainBG div.c-bgBox.front{
+    animation: .7s 0s cubic-bezier(0.22, 1, 0.36, 1) 1 mobView both;
+}
+
+body[data-mode=loaded][data-move=play] #mainBG div.p-frontImage{
+    animation-play-state: running;
+}
+
+#mainBG div.p-front.bg_1 div.p-frontImage{
+    width: 141px;
+    top: 500px;
+    left: 858px;
+    animation-duration: 2s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_2 div.p-frontImage{
+    width: 141px;
+    top: 191px;
+    left: 871px;
+    animation-duration: 2.2s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_3 div.p-frontImage{
+    width: 234px;
+    top: 219px;
+    left: 717px;
+    animation-duration: 2.4s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_4 div.p-frontImage{
+    width: 165px;
+    top: 619px;
+    left: 1486px;
+    animation-duration: 2.6s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_5 div.p-frontImage{
+    width: 332px;
+    top: 193px;
+    left: 1526px;
+    animation-duration: 2.8s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_6 div.p-frontImage{
+    width: 109px;
+    top: 255px;
+    left: 1491px;
+    animation-duration: 3s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_7 div.p-frontImage{
+    width: 210px;
+    top: 460px;
+    left: 1386px;
+    animation-duration: 3.2s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_8 div.p-frontImage{
+    width: 228px;
+    top: 439px;
+    left: 649px;
+    animation-duration: 3.4s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_9 div.p-frontImage{
+    width: 390px;
+    top: -257px;
+    left: 1035px;
+    animation-duration: 3.6s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_10 div.p-frontImage{
+    width: 150px;
+    top: 215px;
+    left: 1378px;
+    animation-duration: 3.8s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_11 div.p-frontImage{
+    width: 340px;
+    top: 704px;
+    left: 680px;
+    animation-duration: 4s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_12 div.p-frontImage{
+    width: 234px;
+    top: 10px;
+    left: 602px;
+    animation-duration: 4.2s;
+    animation-name: anime-fuwafuwa;
+}
+
+body[data-mode=loaded] #mainBG div.p-frontImage{
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    animation-name: anime-fuwafuwa;
+}
+
+@keyframes anime-fuwafuwa{
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+#mainBG div.p-frontImage{
+    position: absolute;
+}
+
+
+
+
 /* タイトル */
 
     /* スライドイン*/
@@ -441,7 +709,7 @@ body #topWrap nav{
 #aboutSection div.l-aboutContent{
     width: 100%;
     padding: 50px 0 143px;
-    background: url(../img/bg_pink.png) repeat 0 0/300px 300px #ea7fb8;
+    background: 0 0/300px 300px #ea7fb8;
 }
 
 #aboutSection div.c-mob_star{
@@ -506,6 +774,8 @@ div.c-mob_star.type img.c-starItemB{
     }
 }
 
+/* --------------------------------- */
+
 #aboutSection p.p-aboutTextSP{
     display: none;
 }
@@ -520,12 +790,17 @@ div.c-mob_star.type img.c-starItemB{
 }
 
 #aboutSection div.p-aboutData{
+    display: none;
+}
+
+#aboutSection div.p-aboutDataPC{
+    display:block;
     display: flex;
     justify-content: center;
     margin-bottom: 55px;
 }
 
-#aboutSection div.p-aboutData dl{
+#aboutSection div.p-aboutDataPC dl{
     display: flex;
     max-width: 1280px;
     min-width: 300px;
@@ -535,27 +810,32 @@ div.c-mob_star.type img.c-starItemB{
     margin: 0 auto;
 }
 
-#aboutSection div.p-aboutData dt{
+#aboutSection div.p-aboutDataPC dt{
     position: relative;
     width: 185px;
+    text-align: left;
 }
 
-#aboutSection div.p-aboutData div.c-mob_star{
+#aboutSection div.p-aboutDataPC div.c-mob_star{
     top: -2px;
     left: -20px;
 }
 
-#aboutSection div.p-aboutData div.c-mob_star img{
+#aboutSection div.p-aboutDataPC div.c-mob_star img{
     width: 2vw;
     height: 2vw;
 }
 
-#aboutSection div.p-aboutData dt p{
+#aboutSection div.p-aboutDataPC dt p{
     padding: 0 46px 0 23px;
 }
 
-#aboutSection div.p-aboutData dd span {
+#aboutSection div.p-aboutDataPC dd span{
     font-size: 1.2rem;
+}
+
+#aboutSection div.p-aboutDataPC dd a:hover{
+    text-decoration: none;
 }
 
 #aboutSection .p-aboutData-note{
@@ -1172,20 +1452,6 @@ div.c-mob_star.type img.c-starItemB{
     margin-left: 7vw;
 }
 
-#accessSection div.p-access__text p.p-access__link{
-    font-size: 1.2rem;
-    line-height: 2.333;
-}
-
-#accessSection div.p-access__text p.p-access__link::after{
-    content: "";
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    background: url(../img/openTab.svg) no-repeat 50% 100%/11px 11px;
-    margin-left: 0.5em;
-}
-
 #accessSection div.p-access__text ul{
     margin-top: 23px;
 }
@@ -1204,6 +1470,10 @@ div.c-mob_star.type img.c-starItemB{
     left: -50%;
     width: 30px;
     height: 30px;
+}
+
+#accessSection div.p-access__text a:hover{
+    text-decoration: none;
 }
 
 #noteSectionSP{
@@ -1294,6 +1564,7 @@ div.c-mob_star.type img.c-starItemB{
 #noteSection .p-note dd{
     margin-top: 14px;
     padding: 0 20px;
+    text-align: left;
 }
 
 #contactSection{
