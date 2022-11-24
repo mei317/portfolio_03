@@ -3,11 +3,14 @@ html{
 }
 
 body{
-    background: url(../img/.png) repeat 0 0/150px 150px #ff5703 fixed;
+    background: 0 0/150px 150px #ff5703 fixed;
     font-size: 3.6vw;
     font-weight: 400;
     line-height: 1.9;
-    font-family: "Noto Sans JP",-apple-system,BlinkMacSystemFont,"Yu Gothic",YuGothic,"ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
+    font-family: "Noto Sans JP",-apple-system,BlinkMacSystemFont,
+    "Yu Gothic",YuGothic,
+    "ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,
+    "メイリオ",Meiryo,sans-serif;
     overflow-y: scroll;
     -webkit-text-size-adjust: 100%;
 }
@@ -45,7 +48,6 @@ body[data-mode=loaded][data-scroll=""] #topWrap #news{
 #titleSection nav ul.lang li a,
 #titleSection nav ul.lang li span,
 #titleSection h1, #topWrap div.p-topWrap__banner.ar div.c-box, #topWrap nav li a,
-#topWrap header h1,
 #accessSection h2,
 #ticketSection h2,
 #programSection h2,
@@ -58,10 +60,25 @@ body[data-mode=loaded][data-scroll=""] #topWrap #news{
     white-space: nowrap;
 }
 
-#topWrap header h1{
-    width: 49.733vw;
-    height: 4vw;
-    background: url(../img/.svg) no-repeat 0 0/contain;
+#topWrap .c-logoText {
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+
+#topWrap .c-logoText h1 {
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 1rem;
+    font-weight: 250;
+    color: #fff;
+    margin-bottom: -10px;
+}
+
+#topWrap .c-logoText p {
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2.2rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 body #topWrap nav{
@@ -76,7 +93,7 @@ body #topWrap nav{
     right: 3.467vw;
 }
 
-#topWrap nav ul{
+#topWrap nav .p-topWrap__sns{
     display: flex;
     justify-content: space-between;
     width: 19vw;
@@ -86,38 +103,17 @@ body #topWrap nav{
     border-right: 0.267vw solid rgba(255,255,255,.4);
 }
 
-#topWrap nav li{
-    width:7vw;
-    height: 4vw;
-}
-
-#topWrap nav li.p-topWrap__snsTwitter a{
-    background-image: url(../img/.svg);
-    background-size: 100% auto;
-}
-
-#topWrap nav li.p-topWrap__snsInstagram a{
-    background-image: url(../img/.svg);
-    background-size: 100% auto;
-}
-
-#topWrap nav li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: no-repeat 50% 50%;
-}
-
 #topWrap nav a{
     display: block;
 }
 
-#topWrap nav div.p-topWrap__mask a{
-    width: 4vw;
-    height: 4.134vw;
-    background: url(../img/.svg) no-repeat 0 0/contain;
-    position: relative;
+#topWrap nav div.p-topWrap__mask img {
+    width: 2vw;
+    height: 3vw;
+    margin-top: 1vw;
 }
+
+/* AR banner */
 
 #topWrap div.p-topWrap__banner.ar{
     left: 1.867vw;
@@ -132,7 +128,6 @@ body #topWrap nav{
     bottom: 11.2vw;
 }
 
-#topWrap div.p-topWrap__banner a,
 #topWrap div.p-topWrap__banner div.cs{
     display: block;
     width: 100%;
@@ -158,16 +153,36 @@ body #topWrap nav{
     background: url(../img/fix/.jpg) no-repeat 50% 50%/auto 100%;
 }
 
-#topWrap div.p-topWrap__banner.ticket{
+/* ---------------------------------------- */
+.c-hoverType_a,
+.c-hoverType_ax,
+.c-hoverType_b,
+.c-hoverType_d {
+    display: block;
+    position: relative;
+}
+
+.c-hoverType_a div.c-box,
+.c-hoverType_d div.c-box {
+    overflow: hidden;
+    position: relative;
+}
+
+.p-topWrap__bannerPC{
+    display: none;
+}
+
+/* ticket banner */
+#topWrap div.p-topWrap__banner{
     right: 1.867vw;
     background: #fff;
 }
 
-#topWrap div.p-topWrap__banner.ticket a{
+#topWrap div.p-topWrap__banner a{
     padding: 1.067vw;
 }
 
-#topWrap div.p-topWrap__banner.ticket div.c-box{
+#topWrap div.p-topWrap__banner div.c-box{
     display: flex;
     align-items: center;
     height: 100%;
@@ -180,14 +195,14 @@ body #topWrap nav{
     background: url(../img/.svg) no-repeat 1.867vw 50%/8.533vw 8.533vw;
 }
 
-#topWrap div.p-topWrap__banner.ticket div.c-box::before,
-#topWrap div.p-topWrap__banner.ticket div.c-box::after{
+#topWrap div.p-topWrap__banner div.c-box::before,
+#topWrap div.p-topWrap__banner div.c-box::after{
     content: "";
     display: block;
     position: absolute;
 }
 
-#topWrap div.p-topWrap__banner.ticket div.c-box::before{
+#topWrap div.p-topWrap__banner div.c-box::before{
     width: 100%;
     height: 100%;
     border: 0.267vw solid #57ab48;
@@ -196,7 +211,7 @@ body #topWrap nav{
     left: 0;
 }
 
-#topWrap div.p-topWrap__banner.ticket div.c-box::after{
+#topWrap div.p-topWrap__banner div.c-box::after{
     width: 2.4vw;
     height: 100%;
     position: absolute;
@@ -206,6 +221,9 @@ body #topWrap nav{
     background: url(../img/fix/.svg) no-repeat 50% 50%/2.4vw 10.667vw;
 }
 
+/* ---------------------------------------- */
+
+/* newsVar */
 #topWrap #newsPC{
     display: none;
 }
@@ -258,9 +276,198 @@ body #topWrap nav{
 	overflow: hidden;
 }
 
+/* --------------------------------- */
+
 #mainWrap{
 	width: 100%;
 }
+
+/* 背景画像 */
+#mainBG{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 0;
+}
+
+#bgContainer{
+    width: 85.196vh;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -41.747vh;
+}
+
+body[data-mode=loaded] #mainBG div.c-bgBox.back{
+    animation: .6s .1s cubic-bezier(0.22, 1, 0.36, 1) 1 mainView both;
+}
+
+body[data-mode=loaded] #mainBG div.c-bgBox{
+    transform: translate(0, 0);
+}
+
+#mainBG div.c-bgBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 110vh);
+}
+
+#mainBG div.p-back,
+#mainBG div.p-front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0vw;
+    left: 0;
+}
+
+.positionA{
+    animation-name: positionA;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes positionA{
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-200px);
+    }
+}
+
+.positionB{
+    animation-name: positionB;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes positionB{
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-200px);
+    }
+}
+
+.positionC{
+    animation-name: positionC;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes positionC{
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+body[data-scroll=""] #mainBG div.p-backImage{
+    top: 18.875vh;
+}
+
+#mainBG div.p-backImage{
+    width: 100%;
+    position: absolute;
+    top: 4.219vh;
+    left: 0;
+    transition: top .5s 0s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#mainBG div.p-back img,
+#mainBG div.p-front img{
+    width: 100%;
+    height: auto;
+}
+
+body[data-mode=loaded] #mainBG div.c-bgBox.front{
+    animation: .7s 0s cubic-bezier(0.22, 1, 0.36, 1) 1 mobView both;
+}
+
+body[data-mode=loaded][data-move=play] #mainBG div.p-frontImage{
+    animation-play-state: running;
+}
+
+#mainBG div.p-front.bg_1 div.p-frontImage{
+    width: 141px;
+    top: 500px;
+    left: 858px;
+    animation-duration: 2s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_2 div.p-frontImage{
+    width: 8.068vh;
+    top: 24.944vh;
+    left: 15.767vh;
+    animation-duration: 2.2s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_3 div.p-frontImage{
+    width: 16.876vh;
+    top: -4.145vh;
+    left: 9.104vh;
+    animation-duration: 2.4s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_4 div.p-frontImage{
+    width: 24.574vh;
+    top: -6.366vh;
+    left: 55.144vh;
+    animation-duration: 2.6s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_5 div.p-frontImage,
+#mainBG div.p-front.bg_6 div.p-frontImage,
+#mainBG div.p-front.bg_7 div.p-frontImage,
+#mainBG div.p-front.bg_8 div.p-frontImage,
+#mainBG div.p-front.bg_9 div.p-frontImage,
+#mainBG div.p-front.bg_10 div.p-frontImage,
+#mainBG div.p-front.bg_11 div.p-frontImage,
+#mainBG div.p-front.bg_12 div.p-frontImage{
+    display: none;
+}
+
+body[data-mode=loaded] #mainBG div.p-frontImage{
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    animation-name: anime-fuwafuwa;
+}
+
+@keyframes anime-fuwafuwa{
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+#mainBG div.p-frontImage{
+    position: absolute;
+}
+
+/* ----------------------------------- */
 
 #mainWrap section, #mainWrap footer{
     position: relative;

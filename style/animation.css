@@ -19,12 +19,6 @@
     body #topWrap div.p-topWrap__bannerPC.ticket{
         transform: translateX(200px);
     }
-
-    body[data-mode=loaded][data-scroll=""] #topWrap nav,
-    body[data-mode=loaded][data-scroll=""] #topWrap div.p-topWrap__bannerPC,
-    body[data-mode=loaded][data-scroll=""] #topWrap #newsPC{
-        transition-delay: .5s;
-    }
 }
 
 body[data-mode=loaded]:not([data-scroll=bottom]) #topWrap #news,
