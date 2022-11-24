@@ -4,12 +4,15 @@ html{
 }
 
 body{
-    background: url(../img/bg.png) repeat 0 0/300px 300px #ff5703 fixed;
+    background: 0 0/300px 300px #ff5703 fixed;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 2;
-    font-family: "Noto Sans JP",-apple-system,BlinkMacSystemFont,"Yu Gothic",YuGothic,"ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,"メイリオ",Meiryo,sans-serif;
-    /* overflow-y: scroll; */
+    font-family: "Noto Sans JP",-apple-system,BlinkMacSystemFont,
+    "Yu Gothic",YuGothic,
+    "ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,
+    "メイリオ",Meiryo,
+    sans-serif;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -141,7 +144,7 @@ body #topWrap nav{
     overflow: hidden;
     font-size: 0;
     border-radius: 10px;
-    background: url(../img/fix/banner_ar_text.png) no-repeat 0 100%/100% auto,url(../img/bg_white.png) repeat 0 0/300px 300px;
+    background: 0 100%/100% auto,0 0/300px 300px;
 }
 
 .c-hoverType_a div.c-box,
@@ -170,7 +173,7 @@ body #topWrap nav{
     width: 160px;
     height: 120px;
     border-radius: 3px;
-    background: url(../img/fix/banner_ar_photo.gif) no-repeat 0 0/100% auto;
+    background: 0 0/100% auto;
 }
 
 .c-hoverType_a[data-hover="1"] div.c-box::after,
@@ -351,26 +354,6 @@ body #topWrap nav{
     }
 }
 
-/* .fadeOut{
-    animation-name: fadeOut;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeOut{
-    0% {
-        opacity: 1;
-        transform:scale3d(1,1,1);
-    }
-
-    100% {
-        opacity: 0;
-        transform:scale3d(0,0,0);
-
-    }
-} */
-
-
 #topWrap #news{
     width: 100%;
     height: 40px;
@@ -458,11 +441,6 @@ body[data-mode=loaded] #mainBG div.c-bgBox{
     margin-left: -1200px;
     transform: translate(0, 1340px);
 }
-
-/* body[data-mode=loaded][data-move=play] #mainBG div.p-back,
-body[data-mode=loaded][data-move=play] #mainBG div.p-front{
-    transform: translateY(0) !important;
-} */
 
 #mainBG div.p-back,
 #mainBG div.p-front{
@@ -666,9 +644,6 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     position: absolute;
 }
 
-
-
-
 /* タイトル */
 
     /* スライドイン*/
@@ -772,12 +747,6 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     top: 0;
     left: 0;
     clip-path: polygon(14% 27%, 45.6% 13%, 47.333% 94%, 79% 25%, 100% 86%, 0% 100%);
-}
-
-#aboutSection::after {
-    height: 62px;
-    background-image: url(../img/about/bg_bottom.png);
-    bottom: 0;
 }
 
 #aboutSection div.l-aboutContent{
@@ -1082,10 +1051,6 @@ div.c-mob_star.type img.c-starItemB{
     z-index: 1;
 }
 
-/* body div.p-swipeSlide, body div.c-swipeWrap{
-    content-visibility: auto;
-} */
-
 .c-swipeWrap{
     position: relative;
     width: 100%;
@@ -1115,6 +1080,8 @@ div.c-mob_star.type img.c-starItemB{
     position: relative;
     transition-property: transform;
 }
+
+/* ---------------------------------------------- */
 
 #programSection{
     margin-top: 194px;
@@ -1576,7 +1543,7 @@ div.c-mob_star.type img.c-starItemB{
     width: 100%;
     padding: 39px 0 208px;
     position: relative;
-    background: url(../img/bg_blue_rough.png) repeat 0 0/300px 300px #00badc;
+    background: 0 0/300px 300px #00badc;
     color: #fff;
 }
 
@@ -1668,7 +1635,7 @@ div.c-mob_star.type img.c-starItemB{
     width: 100%;
     padding: 81px 0 77px;
     position: relative;
-    background: url(../img/bg_white.png) repeat 0 0/300px 300px #fafafa;
+    background: 0 0/300px 300px #fafafa;
 }
 
 #contactSection h2{
@@ -1711,7 +1678,7 @@ div.c-mob_star.type img.c-starItemB{
     padding: 17px 38px 17px 38px;
     border-radius: 41px;
     white-space: nowrap;
-    background: url(../img/bg_pink.png) repeat 0 0/300px 300px #ea7fb8;
+    background: 0 0/300px 300px #ea7fb8;
     color: #fff;
 }
 

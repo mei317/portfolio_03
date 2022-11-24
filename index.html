@@ -7,13 +7,13 @@
 		<meta name="format-detection" content='telephone=no'>
 		<title>お笑いウィンターフェス</title>
 		<meta name="description" content="笑い溢れるイベント「お笑いウィンターフェス」。最強の舞台ネタ・超豪華ステージ、全てを前回にお届けします。">
-		<meta property="og:url" content="https://konositeURL">
+		<meta property="og:url" content="https://mei317.github.io/portfolio_03/">
 		<meta property="og:title" content="お笑いウィンターフェス">
 		<meta property="og:type" content="article">
 		<meta property="og:description" content="笑い溢れるイベント「お笑いウィンターフェス」。最強の舞台ネタ・超豪華ステージ、全てを前回にお届けします。">
 		<meta property="og:site_name" content="お笑いウィンターフェス">
 		<meta property="og:image" content="">
-		<link rel="canonical" href="https://konositeURL">
+		<link rel="canonical" href="https://mei317.github.io/portfolio_03/">
 		<link rel="stylesheet" href="./style/reset.css">
 		<link rel="stylesheet" href="./style/bace.css">
 		<link rel="stylesheet" href="./style/c-style.css">
@@ -1377,7 +1377,7 @@
 					HTML: "新型コロナウィルス感染症対策ガイドライン",
 				});
 			});
-			// チケットスライドイン
+			// チケットスライド
 			$(window).scroll(function () {
 				var wHeight = $(window).height();
 				var scrollAmount = $(window).scrollTop();
@@ -1392,7 +1392,6 @@
 					}
 				});
 			});
-
 			// ヘッダースライドイン
 			$(function(){
 				$(window).on('scroll', function(){
@@ -1403,6 +1402,7 @@
 					}
 				});
 			});
+			// チケットスライドイン
 			// footerBtn配色
 			$("#footer .c-hoverType_b").hover(function() {
 				var colors = ["#00d1f7", "#e6be40", "#69cf26", "#e878b3", "#00d1f7"];
@@ -1437,32 +1437,36 @@
 			});
 			// 背景画像を移動
 				$(window).scroll(function () {
-					const wHeight = $(window).height();
-					const scrollAmount = $(window).scrollTop();
-					$('#topPoint').each(function () {
-						const targetPosition = $(this).offset().top;
-						if(scrollAmount > targetPosition - wHeight - 20) {
-							$('.p-back').addClass("positionA");
+					var wHeight = $(window).height();
+					var scrollAmount = $(window).scrollTop();
+					$('#mainBG div.p-back').each(function () {
+						var targetPosition = $('#aboutSection').offset().top;
+						if(scrollAmount > targetPosition - wHeight + 50) {
+							$('#mainBG div.p-back').removeClass('positionC');
+							$('#mainBG div.p-back').addClass('positionA');
+						}else{
+							$('#mainBG div.p-back').removeClass('positionA');
+							$('#mainBG div.p-back').addClass('positionC');
 						}
 					});
-					setInterval(function(){
-						$('.p-back').addClass("positionC");
-					}, 2000 );
 				});
 			// 背景画像を移動
 				$(window).scroll(function () {
-					const wHeight = $(window).height();
-					const scrollAmount = $(window).scrollTop();
-					$('#topPoint').each(function () {
-						const targetPosition = $(this).offset().top;
-						if(scrollAmount > targetPosition - wHeight + 20){
+					var wHeight = $(window).height();
+					var scrollAmount = $(window).scrollTop();
+					$('#mainBG div.p-front').each(function () {
+						var targetPosition = $('#aboutSection').offset().top;
+						if(scrollAmount > targetPosition - wHeight + 50) {
+							$('#mainBG div.p-front').removeClass('positionC');
 							$('#mainBG div.p-front').addClass('positionB');
+						}else{
+							$('#mainBG div.p-front').removeClass('positionB');
+							$('#mainBG div.p-front').addClass('positionC');
 						}
 					});
-					setInterval(function(){
-						$('.p-front').addClass("positionC");
-					}, 2000 );
 				});
 		</script>
 	</body>
 </html>
+
+
