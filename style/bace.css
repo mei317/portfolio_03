@@ -26,7 +26,7 @@ img {
     width:  4vw;
     height: 4vw;
 }
-/*
+
 .u-external-link{
     color: #fff;
 }
@@ -38,7 +38,7 @@ img {
     width: 2.267vw;
     height: 2.267vw;
     margin-left: 0.7em;
-} */
+}
 
 @media screen and (min-width:769px) {
     .u-twitter, .u-instagram{
