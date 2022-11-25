@@ -8,6 +8,11 @@
     body #topWrap div.p-topWrap__banner.ticket{
         transform: translateX(50vw);
     }
+
+    body[data-mode=loaded] #titleSectionSP h1{
+        transition-duration: .8s;
+        transform: none;
+    }
 }
 /* PC */
 @media screen and (min-width:769px) {
@@ -18,6 +23,11 @@
 
     body #topWrap div.p-topWrap__bannerPC.ticket{
         transform: translateX(200px);
+    }
+
+    body[data-mode=loaded] #titleSection h1{
+        transition-duration: .8s;
+        transform: none;
     }
 }
 
@@ -58,10 +68,7 @@ body #topWrap #newsPC{
     transform: translateY(50px);
 }
 
-body[data-mode=loaded] #titleSection h1{
-    transition-duration: .8s;
-    transform: none;
-}
+
 
 #accessSection h2.view, #ticketSection h2.view,
 #programSection h2.view, #floorSection h2.view,

@@ -39,44 +39,25 @@ body[data-mode=loaded][data-scroll=""] #topWrap #news{
     z-index: 80;
 }
 
-#comedianSlide ul.sns a,
-#footer div.p-footer__logo p a,
-#footer div.p-footer__logo h1,
-#footerSP div.p-footer__logo p a,
-#footerSP div.p-footer__logo h1,
-#floorSection #floorSlide div.swiper-slide h3,
-#titleSection nav ul.lang li a,
-#titleSection nav ul.lang li span,
-#titleSection h1, #topWrap div.p-topWrap__banner.ar div.c-box, #topWrap nav li a,
-#accessSection h2,
-#ticketSection h2,
-#programSection h2,
-#floorSection h2,
-#floorSectionSP h2,
-#comedianSection h2,
-#aboutSection h2 {
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-}
-
 #topWrap .c-logoText {
-    width: 100%;
+    width: 60vw;
+    height: 4vw;
     position: absolute;
     display: none;
+    padding-top: 10px;
 }
 
-#topWrap .c-logoText h1 {
+#topWrap .c-logoText h1{
     font-family: 'Dela Gothic One', cursive;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 250;
     color: #fff;
-    margin-bottom: -10px;
+    margin-bottom: -20px;
 }
 
 #topWrap .c-logoText p {
     font-family: 'Dela Gothic One', cursive;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     color: #fff;
     text-decoration: none;
 }
@@ -113,8 +94,7 @@ body #topWrap nav{
     margin-top: 1vw;
 }
 
-/* AR banner */
-
+/* ARBanner */
 #topWrap div.p-topWrap__banner.ar{
     left: 1.867vw;
 }
@@ -152,8 +132,8 @@ body #topWrap nav{
     /* border-radius: 0.667vw; */
     background: url(../img/fix/.jpg) no-repeat 50% 50%/auto 100%;
 }
+/* ----------ARBanner----------- */
 
-/* ---------------------------------------- */
 .c-hoverType_a,
 .c-hoverType_ax,
 .c-hoverType_b,
@@ -172,7 +152,7 @@ body #topWrap nav{
     display: none;
 }
 
-/* ticket banner */
+/* ticketBanner */
 #topWrap div.p-topWrap__banner{
     right: 1.867vw;
     background: #fff;
@@ -220,8 +200,7 @@ body #topWrap nav{
     box-shadow: -0.533vw 0 #57ab48;
     background: url(../img/fix/.svg) no-repeat 50% 50%/2.4vw 10.667vw;
 }
-
-/* ---------------------------------------- */
+/* ---------ticketBanner------------ */
 
 /* newsVar */
 #topWrap #newsPC{
@@ -275,14 +254,13 @@ body #topWrap nav{
 #topWrap #newsBar div.p-topWrap__newsBar__Contents{
 	overflow: hidden;
 }
-
-/* --------------------------------- */
+/*------------newsVar------------- */
 
 #mainWrap{
 	width: 100%;
 }
 
-/* 背景画像 */
+/* background */
 #mainBG{
     width: 100%;
     height: 100vh;
@@ -302,9 +280,6 @@ body #topWrap nav{
     margin-left: -41.747vh;
 }
 
-body[data-mode=loaded] #mainBG div.c-bgBox.back{
-    animation: .6s .1s cubic-bezier(0.22, 1, 0.36, 1) 1 mainView both;
-}
 
 body[data-mode=loaded] #mainBG div.c-bgBox{
     transform: translate(0, 0);
@@ -316,7 +291,6 @@ body[data-mode=loaded] #mainBG div.c-bgBox{
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(0, 110vh);
 }
 
 #mainBG div.p-back,
@@ -403,16 +377,16 @@ body[data-mode=loaded][data-move=play] #mainBG div.p-frontImage{
 }
 
 #mainBG div.p-front.bg_1 div.p-frontImage{
-    width: 141px;
-    top: 500px;
-    left: 858px;
+    width: 10.437vh;
+    top: 10.807vh;
+    left: 60.252vh;
     animation-duration: 2s;
     animation-name: anime-fuwafuwa;
 }
 
 #mainBG div.p-front.bg_2 div.p-frontImage{
-    width: 8.068vh;
-    top: 24.944vh;
+    width: 10.068vh;
+    top: 18.944vh;
     left: 15.767vh;
     animation-duration: 2.2s;
     animation-name: anime-fuwafuwa;
@@ -434,15 +408,63 @@ body[data-mode=loaded][data-move=play] #mainBG div.p-frontImage{
     animation-name: anime-fuwafuwa;
 }
 
-#mainBG div.p-front.bg_5 div.p-frontImage,
-#mainBG div.p-front.bg_6 div.p-frontImage,
-#mainBG div.p-front.bg_7 div.p-frontImage,
-#mainBG div.p-front.bg_8 div.p-frontImage,
-#mainBG div.p-front.bg_9 div.p-frontImage,
-#mainBG div.p-front.bg_10 div.p-frontImage,
-#mainBG div.p-front.bg_11 div.p-frontImage,
-#mainBG div.p-front.bg_12 div.p-frontImage{
+#mainBG div.p-front.bg_5 div.p-frontImage{
+    width: 24.574vh;
+    top: 45.634vh;
+    left: 57.144vh;
+    animation-duration: 2.6s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_6 div.p-frontImage{
+    width: 15.574vh;
+    top: 12.634vh;
+    left: 40.144vh;
+    animation-duration: 2.6s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_7 div.p-frontImage{
+    width: 15.574vh;
+    top: 67.634vh;
+    left: 9.144vh;
+    animation-duration: 2.6s;
+    animation-name: anime-fuwafuwa;
+}
+#mainBG div.p-front.bg_8 div.p-frontImage{
+    width: 24.574vh;
+    top: -10.366vh;
+    left: 26.144vh;
+    animation-duration: 2.6s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_9 div.p-frontImage{
     display: none;
+}
+
+#mainBG div.p-front.bg_10 div.p-frontImage{
+    width: 13.574vh;
+    top: 20.634vh;
+    left: 27.144vh;
+    animation-duration: 2.6s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_11 div.p-frontImage{
+    width: 17vh;
+    top: 25.634vh;
+    left: 54.144vh;
+    animation-duration: 2.6s;
+    animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-front.bg_12 div.p-frontImage{
+    width: 21vh;
+    top: 83.634vh;
+    left: 25vh;
+    animation-duration: 2.6s;
+    animation-name: anime-fuwafuwa;
 }
 
 body[data-mode=loaded] #mainBG div.p-frontImage{
@@ -451,6 +473,10 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     animation-direction: alternate;
     animation-duration: 1.5s;
     animation-name: anime-fuwafuwa;
+}
+
+#mainBG div.p-frontImage{
+    position: absolute;
 }
 
 @keyframes anime-fuwafuwa{
@@ -462,30 +488,82 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
         transform: translateY(-20px);
     }
 }
+/* -----------background-------------- */
 
-#mainBG div.p-frontImage{
-    position: absolute;
-}
-
-/* ----------------------------------- */
-
-#mainWrap section, #mainWrap footer{
+/* title */
+#mainWrap div.c-container {
+    width: 100%;
+    margin: 0 auto;
     position: relative;
+    text-align: center;
+    animation: slideIn 0.3s ease 1s 1 normal backwards;
+    padding-top: 20px;
 }
 
 #titleSection{
+    display: none;
+}
+
+#titleSectionSP{
     height: 100vh;
     position: relative;
 }
 
-#titleSection h1{
-    width: 100%;
-    transform: translateY(-50vw);
-    transition: transform 0s 0s cubic-bezier(0.22, 1, 0.36, 1);
-    height: 37.067vw;
-    background: url(../img/タイトルロゴ.svg) no-repeat 50% 0/contain;
+/* slideIn*/
+.slideIn{
+    animation-name: slideOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
+@keyframes slideIn{
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#titleSectionSP h1{
+    width: 100%;
+    height: 42vw;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: #fff;
+    margin-bottom: -133.5px;
+}
+
+#titleSectionSP p{
+    font-family: 'Dela Gothic One', cursive;
+    color: #fff;
+}
+
+#titleSectionSP .c-containerTitle{
+    font-size: 2.9rem;
+    font-weight: 200;
+    margin-bottom: -28px;
+}
+
+#titleSectionSP .c-containerDay{
+    font-size: 2.35rem;
+    font-weight: 100;
+    margin-bottom: -26px;
+}
+
+#titleSectionSP span{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2.4rem;
+    font-weight: 100;
+    color: #fff;
+}
+/* -------slideIn-------- */
+/* ---------title-------------- */
+
+/* about */
 #aboutSection{
     width: 100%;
     padding: 12.666vw 0 10px;
@@ -520,6 +598,7 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     position: relative;
 }
 
+/* star */
 #aboutSection div.c-mob_star{
     left: 65vw;
     top: -30vw;
@@ -548,7 +627,39 @@ div.c-mob_star.type img.c-starItemA{
 div.c-mob_star.type img.c-starItemB{
     right: 0;
 }
+/* ------------star------------ */
 
+/* aboutTitle */
+#aboutSection .c-titleScroll{
+    position: absolute;
+    width: 53.2vw;
+    height: 32.667vw;
+    top: -37.866vw;
+    left: 3.6vw;
+}
+
+.c-titleScroll {
+    opacity: 0;
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        transform:scale3d(0,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        transform:scale3d(1,1,1);
+    }
+}
+/* --------------------------------- */
 #accessSection h2,
 #ticketSection h2,
 #programSection h2,
@@ -569,12 +680,12 @@ div.c-mob_star.type img.c-starItemB{
     transform-origin: 100% 100%;
 }
 
-#aboutSection p.p-aboutText{
+#aboutSection .p-aboutText,
+#aboutSection .p-aboutDataPC{
     display:none;
 }
 
 #aboutSection p.p-aboutTextSP{
-    display: block;
     font-size: 4.2666vw;
     font-weight: 500;
     line-height: 1.8125;
@@ -604,6 +715,10 @@ div.c-mob_star.type img.c-starItemB{
     width: 24.533vw;
 }
 
+#aboutSection div.p-aboutData dd{
+    text-align: left;
+}
+
 #aboutSection div.p-aboutData dd span {
     font-size: 2.666vw;
 }
@@ -630,7 +745,9 @@ div.c-mob_star.type img.c-starItemB{
 #aboutSection .p-aboutData-note{
     text-align: center;
 }
+/* -----------about-------------- */
 
+/* comedian */
 #comedianSection{
     margin-top: -10px;
 }
@@ -644,13 +761,12 @@ div.c-mob_star.type img.c-starItemB{
     background: 0 0/150px 150px #65cd25;
 }
 
-#comedianSection h2{
+#comedianSection .c-titleScroll{
+    position: absolute;
     width: 68.8vw;
     height: 27.733vw;
     top: -16.533vw;
     left: 29.867vw;
-    background-image: url(../img/artists/title_sp.svg);
-    transform-origin: 0 100%;
 }
 
 #comedianSection ul{
@@ -731,8 +847,10 @@ div.c-mob_star.type img.c-starItemB{
     font-size: 2.666vw;
     line-height: 1.4;
 }
+/* -----------comedian------------- */
 
-#floorSection{
+/* floor */
+/* #floorSection{
     margin-top: 3.733vw;
     position: relative;
 }
@@ -765,9 +883,9 @@ div.c-mob_star.type img.c-starItemB{
     z-index: 1;
 }
 
-/* body div.p-swipeSlide, body div.c-swipeWrap{
+body div.p-swipeSlide, body div.c-swipeWrap{
     content-visibility: auto;
-} */
+}
 
 .c-swipeWrap{
     position: relative;
@@ -797,8 +915,10 @@ div.c-mob_star.type img.c-starItemB{
     height: 100%;
     position: relative;
     transition-property: transform;
-}
+} */
+/* -----------floor-------------- */
 
+/* program */
 #programSection{
     margin-top: 24vw;
 }
@@ -810,16 +930,15 @@ div.c-mob_star.type img.c-starItemB{
 #programSection div.c-container{
     padding: 19.733vw 0 12vw;
     border-radius: 5.333vw 0 0 5.333vw;
-    background: url(../img/bg_white.png) repeat 0 0/150px 150px #fafafa;
+    background: 0 0/150px 150px #fafafa;
 }
 
-#programSection h2{
+#programSection .c-titleScroll{
+    position: absolute;
     width: 73.867vw;
     height: 27.6vw;
     top: -15.333vw;
     left: 23.467vw;
-    background-image: url(../img/program/title_sp.svg);
-    transform-origin: 0 100%;
 }
 
 #programSection div.p-program__time{
@@ -881,6 +1000,10 @@ div.c-mob_star.type img.c-starItemB{
     top: 2.533vw;
     right: 0;
     z-index: 10;
+}
+
+.p-program__eventPC{
+    display: none;
 }
 
 #programSection div.p-program__event{
@@ -966,6 +1089,7 @@ div.c-mob_star.type img.c-starItemB{
 #programSection div.p-program__event li figure{
     position: relative;
     padding-left: 19.733vw;
+    text-align: left;
 }
 
 #programSection div.p-program__event li figure p.p-program__photo{
@@ -1062,10 +1186,11 @@ div.c-mob_star.type img.c-starItemB{
 #programSection div.p-program__event dt.sun span{
     color: #e92323;
 }
+/* -----------program------------ */
 
+/* ticket */
 #ticketSection{
     width: 100%;
-    overflow: hidden;
     padding-top: 30.4vw;
 }
 
@@ -1083,13 +1208,12 @@ div.c-mob_star.type img.c-starItemB{
     top: -6vw;
 }
 
-#ticketSection h2{
-    width: 56.8vw;
-    height: 27.333vw;
+#ticketSection .c-titleScroll{
+    position: absolute;
+    width: 51.8vw;
+    height: 31.333vw;
     top: -20.4vw;
     left: 16.933vw;
-    background-image: url(../img/tickets/title.svg);
-    transform-origin: 100% 100%;
 }
 
 #ticketSection h3.p-ticket__logo{
@@ -1107,6 +1231,7 @@ div.c-mob_star.type img.c-starItemB{
 
 #ticketSection div.p-ticket__text{
     margin-top: 6.5vw;
+    text-align: left;
 }
 
 #ticketSection div.p-ticket__btn{
@@ -1142,7 +1267,9 @@ div.c-mob_star.type img.c-starItemB{
     display: inline-block;
     top: -1.1vw;
 }
+/* -------------ticket----------------- */
 
+/* access */
 #accessSection{
     padding-top: 9.6vw;
     position: relative;
@@ -1153,7 +1280,7 @@ div.c-mob_star.type img.c-starItemB{
     content: "";
     width: 100%;
     height: 9.867vw;
-    background: url(../img/bg_green_rough.png) repeat 0 0/150px 150px #65cd25;
+    background: 0 0/150px 150px #65cd25;
     position: absolute;
     top: 0;
     left: 0;
@@ -1162,17 +1289,16 @@ div.c-mob_star.type img.c-starItemB{
 
 #accessSection div.c-container{
     padding: 23.733vw 0 20.533vw;
-    background: url(../img/bg_green_rough.png) repeat 0 0/150px 150px #65cd25;
+    background: 0 0/150px 150px #65cd25;
     color: #fff;
 }
 
-#accessSection h2{
-    width: 64.4vw;
-    height: 19.867vw;
+#accessSection .c-titleScroll{
+    position: absolute;
+    width: 57.4vw;
+    height: 25.867vw;
     top: -5.067vw;
     left: 5.6vw;
-    background-image: url(../img/access/title_sp.svg);
-    transform-origin: 100% 50%;
 }
 
 #accessSection div.p-access__map{
@@ -1192,6 +1318,7 @@ div.c-mob_star.type img.c-starItemB{
 #accessSection div.p-access__text{
     padding: 0 6vw;
     font-size: 0;
+    text-align: left;
 }
 
 #accessSection div.p-access__text figure img.p-access__textImg{
@@ -1203,18 +1330,8 @@ div.c-mob_star.type img.c-starItemB{
     font-size: 3.6vw;
 }
 
-#accessSection div.p-access__text p.p-access__link{
-    font-size: 3.2vw;
-    line-height: 2.25;
-}
-
-#accessSection div.p-access__text p.p-access__link::after{
-    content: "";
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    background: url(../img/openTab.svg) no-repeat 50% 100%/2.933vw 2.933vw;
-    margin-left: 0.5em;
+#accessSection div.p-access__text a:hover{
+    text-decoration: none;
 }
 
 #accessSection div.p-access__text ul{
@@ -1230,107 +1347,16 @@ div.c-mob_star.type img.c-starItemB{
     padding-left: 5.333vw;
 }
 
-#accessSection div.p-access__text div.c-mob_star{
+#accessSection .c-mob_star{
     transform: scale(0.32);
     transform-origin: 0 50%;
     top: 50%;
-    left: -10px;
+    left: -2%;
     margin-top: -10.5vw;
 }
-/*
-#noteSection{
-    padding-top: 4vw;
-    position: relative;
-    margin-top: -4.8vw;
-}
+/* ------------access-------------- */
 
-#noteSection::before{
-    content: "";
-    width: 100%;
-    height: 4.8vw;
-    background: url(../img/bg_blue_rough.png) repeat 0 0/150px 150px #00badc;
-    position: absolute;
-    top: 0;
-    left: 0;
-    clip-path: ellipse(184vw 107.533vw at 50% 107.533vw);
-}
-
-#noteSection div.l-noteContent{
-    width: 100%;
-    padding: 8.533vw 0 18.4vw;
-    position: relative;
-    background: url(../img/bg_blue_rough.png) repeat 0 0/150px 150px #00badc;
-    color: #fff;
-}
-
-#noteSection div.c-mob_star{
-    transform: scale(0.84);
-    top: -10.667vw;
-    left: 50%;
-    margin-left: -13.133vw;
-}
-
-#noteSection div.c-container{
-    padding: 0 3.2vw;
-}
-
-#noteSection h2{
-    width: 100%;
-    font-size: 6.933vw;
-    font-weight: 400;
-    line-height: 1;
-    text-align: center;
-    color: #fff;
-}
-
-#noteSection .p-note{
-    margin-top: 9.067vw;
-}
-
-#noteSection .p-note figure:not(:last-child){
-    margin-bottom: 5.333vw;
-}
-
-#noteSection .p-note figure{
-    min-height: 52vw;
-    padding: 0 2.667vw 0 46.667vw;
-    position: relative;
-}
-
-#noteSection .p-note figure>div{
-    width: 52vw;
-    height: 52vw;
-    border-radius: 26vw;
-    overflow: hidden;
-    font-size: 0;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#noteSectionSP .p-note figure img{
-    width: 100%;
-    height: auto;
-}
-
-#noteSection .p-note figcaption{
-    position: relative;
-}
-
-#noteSection .p-note dt{
-    padding-right: 5.067vw;
-    margin-top: 1.067vw;
-    font-size: 5.333vw;
-    line-height: 1.45;
-}
-
-#noteSection .p-note dd{
-    margin-top: 2.267vw;
-    font-size: 2.667vw;
-    line-height: 2;
-} */
-
+/* note */
 #noteSection{
     display: none;
 }
@@ -1402,13 +1428,15 @@ div.c-mob_star.type img.c-starItemB{
     font-size: 0;
     margin: 0 auto;
     position: absolute;
+    background-color: #00ccff;
     top: 0;
     left: 0;
 }
 
 #noteSectionSP .p-note figure img{
-    width: 100%;
-    height: auto;
+    width: 55%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #noteSectionSP .p-note figcaption{
@@ -1420,12 +1448,14 @@ div.c-mob_star.type img.c-starItemB{
     margin-top: 1.067vw;
     font-size: 5.333vw;
     line-height: 1.45;
+    text-align: left;
 }
 
 #noteSectionSP .p-note dd{
     margin-top: 2.267vw;
     font-size: 2.667vw;
     line-height: 2;
+    text-align: left;
 }
 
 #noteSectionSP .p-note figure:nth-child(2){
@@ -1436,7 +1466,9 @@ div.c-mob_star.type img.c-starItemB{
     left: auto;
     right: 0;
 }
+/* ------------note---------------- */
 
+/* contact */
 #contactSection{
     padding-top: 6.667vw;
     position: relative;
@@ -1517,10 +1549,20 @@ div.c-mob_star.type img.c-starItemB{
     padding-right: 2vw;
     top: -1.25vw;
 }
+/* ----------------note--------------------- */
+
+/* footer */
+#footer{
+    display: none;
+}
 
 #footerSP{
     color: #fff;
     background: #000;
+}
+
+#mainWrap footer{
+    position: relative;
 }
 
 #footerSP div.c-container{
@@ -1532,6 +1574,7 @@ div.c-mob_star.type img.c-starItemB{
     position: relative;
     font-size: 2.667vw;
     line-height: 1.6;
+    text-align: left;
 }
 
 #footerSP li:not(:last-child){
@@ -1542,6 +1585,7 @@ div.c-mob_star.type img.c-starItemB{
     text-decoration: none;
 }
 
+/* footerLogo */
 #footerSP div.p-footer__logo{
     display: flex;
     align-items: flex-end;
@@ -1549,19 +1593,41 @@ div.c-mob_star.type img.c-starItemB{
     margin-top: 10.933vw;
 }
 
-#footerSP div.p-footer__logo h1{
-    width: 53.333vw;
-    height: 12.933vw;
-    background: url(../img/logo_jp.svg) no-repeat 0 100%/contain;
+#footerSP .c-logoText{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 10.933vw;
 }
 
-#footerSP div.p-footer__logo p a{
-    display: block;
-    width: 19.733vw;
-    height: 3.6vw;
-    font-size: 0;
-    background: url(../img/footer/whatever.svg) no-repeat 0 0/contain;
+#footerSP .p-footer__logo a{
+    text-decoration: none;
 }
+
+#footerSP .c-logoText h1{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 1rem;
+    font-weight: 250;
+    color: #fff;
+    margin-bottom: -28px;
+}
+
+#footerSP .c-logoText p{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+#footerSP .p-footer__textImg{
+    font-size:1rem;
+    font-weight: 900;
+    color: #fff;
+    text-align: left;
+    line-height: 1.8;
+    margin-left: 2.4vw;
+}
+/* --------footerLogo--------- */
 
 #footerSP li div.c-mob_star.type{
     top: -1vw;
@@ -1574,3 +1640,4 @@ div.c-mob_star.type img.c-starItemB{
     width: 6vw;
     height: 6vw;
 }
+/* ------------footer------------- */

@@ -114,7 +114,7 @@ body #topWrap nav{
     opacity: 0.5;
 }
 
-
+/* ARBanner */
 #topWrap div.p-topWrap__banner.ar{
     width: 179px;
     height: 180px;
@@ -136,6 +136,7 @@ body #topWrap nav{
     display: block;
     position: relative;
 }
+/* ----------ARBanner----------- */
 
 #topWrap div.p-topWrap__banner.ar div.c-box{
     width: 179px;
@@ -145,6 +146,15 @@ body #topWrap nav{
     font-size: 0;
     border-radius: 10px;
     background: 0 100%/100% auto,0 0/300px 300px;
+}
+
+#topWrap div.p-topWrap__banner.ar div.c-box::before{
+    content: "";
+    display: block;
+    width: 160px;
+    height: 120px;
+    border-radius: 3px;
+    background: 0 0/100% auto;
 }
 
 .c-hoverType_a div.c-box,
@@ -165,15 +175,6 @@ body #topWrap nav{
     left: 0;
     mix-blend-mode: multiply;
     visibility: hidden;
-}
-
-#topWrap div.p-topWrap__banner.ar div.c-box::before{
-    content: "";
-    display: block;
-    width: 160px;
-    height: 120px;
-    border-radius: 3px;
-    background: 0 0/100% auto;
 }
 
 .c-hoverType_a[data-hover="1"] div.c-box::after,
@@ -208,7 +209,7 @@ body #topWrap nav{
     display: none;
 }
 
-/* チケットスライドイン */
+/* ticketBanner */
 #topWrap div.p-topWrap__bannerPC{
     display: block;
     width: 184px;
@@ -353,7 +354,9 @@ body #topWrap nav{
         transform:scale3d(1,1,1);
     }
 }
+/* ---------ticketBanner------------ */
 
+/* newsVar */
 #topWrap #news{
     width: 100%;
     height: 40px;
@@ -363,8 +366,6 @@ body #topWrap nav{
     overflow: hidden;
     background: #000;
 }
-
-/* ニュースバー */
 
 #topWrap #newsBar{
     display: flex;
@@ -391,8 +392,7 @@ body #topWrap nav{
     bottom: 4px;
     background: url(./../img/star02.png) no-repeat 0 100%/30px 30px;
 }
-
-/* -------------------------------- */
+/* ---------newsVar------------ */
 
 #mainWrap{
 	width: 100%;
@@ -403,7 +403,7 @@ body #topWrap nav{
     position: relative;
 }
 
-/* 背景画像 */
+/* background */
 #mainBG{
     width: 100%;
     height: 100%;
@@ -643,10 +643,9 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
 #mainBG div.p-frontImage{
     position: absolute;
 }
+/* -----------background-------------- */
 
-/* タイトル */
-
-    /* スライドイン*/
+/* title */
 #titleSection{
     height: 100vh;
     min-height: 500px;
@@ -661,6 +660,7 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     animation: slideIn 0.3s ease 1s 1 normal backwards;
 }
 
+/* slideIn*/
 .slideIn{
     animation-name: slideOut;
     animation-duration: 0.5s;
@@ -677,24 +677,10 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
         transform: translateY(0);
     }
 }
-
-.slideOut{
-    animation-name: slideOut;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+/* ---------------------------------- */
+#titleSectionSP{
+    display: none;
 }
-
-@keyframes slideOut{
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-}
-
 
 #titleSection h1{
     font-family: 'Dela Gothic One', cursive;
@@ -717,11 +703,11 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     font-size: 3.77rem;
     font-weight: 100;
     color: #fff;
-    margin-top: 0;
 }
+/* -------slideIn-------- */
+/* ---------title-------------- */
 
-/* ------------------------------------ */
-
+/* about */
 #aboutSection{
     width: 100%;
     padding: 88px 0 62px;
@@ -763,6 +749,7 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     left: 455px;
 }
 
+/* star */
 div.c-mob_star.type{
     width: 197px;
     height: 100px;
@@ -784,9 +771,9 @@ div.c-mob_star.type img.c-starItemA{
 div.c-mob_star.type img.c-starItemB{
     right: 30px;
 }
+/* ------------star------------ */
 
-/* セクションタイトル */
-
+/* aboutTitle */
 #aboutSection .c-titleScroll{
     position: absolute;
     width: 266px;
@@ -816,7 +803,6 @@ div.c-mob_star.type img.c-starItemB{
         transform:scale3d(1,1,1);
     }
 }
-
 /* --------------------------------- */
 
 #aboutSection p.p-aboutTextSP{
@@ -884,7 +870,9 @@ div.c-mob_star.type img.c-starItemB{
 #aboutSection .p-aboutData-note{
     text-align: center;
 }
+/* -----------about-------------- */
 
+/* comedian */
 #comedianSection{
     margin-top: -80px;
 }
@@ -976,7 +964,7 @@ div.c-mob_star.type img.c-starItemB{
 #comedianSection li p.p-comedian__textCompany{
     font-size: 1.2rem;
 }
-/* ------------------------------- */
+
 .c-hoverType_ax div.c-hoverBox{
     padding-top: 170px;
     width: 100%;
@@ -1015,10 +1003,10 @@ div.c-mob_star.type img.c-starItemB{
     margin-left: 20px;
     display: block;
 }
-/* --------------------------------- */
+/* -----------comedian------------- */
 
-
-#floorSection{
+/* floor */
+/* #floorSection{
     margin-top: 3.733vw;
     position: relative;
 }
@@ -1079,10 +1067,10 @@ div.c-mob_star.type img.c-starItemB{
     height: 100%;
     position: relative;
     transition-property: transform;
-}
+} */
+/* -----------floor-------------- */
 
-/* ---------------------------------------------- */
-
+/* program */
 #programSection{
     margin-top: 194px;
 }
@@ -1339,11 +1327,12 @@ div.c-mob_star.type img.c-starItemB{
     background: #00d1f7;
 }
 
-
 #programSection div.p-program__eventPC dt.sun span{
     color: #e92323;
 }
+/* -----------program------------ */
 
+/* ticket */
 #ticketSection{
     margin-top: 141px;
 }
@@ -1417,7 +1406,9 @@ div.c-mob_star.type img.c-starItemB{
 #ticketSection div.p-ticket__btn a p{
     position: relative;
 }
+/* -------------ticket----------------- */
 
+/* access */
 #accessSection{
     padding-top: 88px;
     position: relative;
@@ -1516,7 +1507,9 @@ div.c-mob_star.type img.c-starItemB{
 #accessSection div.p-access__text a:hover{
     text-decoration: none;
 }
+/* ------------access-------------- */
 
+/* note */
 #noteSectionSP{
     display: none;
 }
@@ -1607,7 +1600,9 @@ div.c-mob_star.type img.c-starItemB{
     padding: 0 20px;
     text-align: left;
 }
+/* ------------note---------------- */
 
+/* contact */
 #contactSection{
     padding-top: 100px;
     position: relative;
@@ -1716,9 +1711,9 @@ div.c-mob_star.type img.c-starItemB{
 #contactSection div.p-contact__btn a div.c-box::after {
     background-color: #e878b3;
 }
+/* ----------------note--------------------- */
 
-/* フッター */
-
+/* footer */
 #footerSP{
     display: none;
 }
@@ -1758,7 +1753,7 @@ div.c-mob_star.type img.c-starItemB{
     transform: rotate(-90deg);
 }
 
-/* フッターロゴ */
+/* footerLogo */
 #footer .p-footer__logo{
     width: 350px;
     position: relative;
@@ -1801,7 +1796,7 @@ div.c-mob_star.type img.c-starItemB{
     opacity: 0.5;
 }
 
-/* --------------------------------- */
+/* ----------footerLogo------------- */
 
 #footer li {
     padding: 8px 0 8px 23px;
@@ -1829,3 +1824,4 @@ div.c-mob_star.type img.c-starItemB{
     width: 25px;
     height: 25px;
 }
+/* ------------footer------------- */
