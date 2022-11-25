@@ -1394,7 +1394,7 @@ div.c-mob_star.type img.c-starItemB{
 
 #ticketSection div.p-ticket__btn a div.p-ticket__box:hover{
     background-color:rgba(43, 85, 37, 1);
-    ackground-blend-mode: darken;
+    background-blend-mode: darken;
 }
 
 
@@ -1679,7 +1679,7 @@ div.c-mob_star.type img.c-starItemB{
 
 #contactSection div.p-contact__btn a div.c-box:hover{
     background-color :rgb(172, 44, 112);
-    ackground-blend-mode :darken;
+    background-blend-mode :darken;
 }
 
 .hoverType_a div.c-box,
