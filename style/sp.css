@@ -94,11 +94,6 @@ body #topWrap nav{
     margin-top: 1vw;
 }
 
-/* ARBanner */
-#topWrap div.p-topWrap__banner.ar{
-    left: 1.867vw;
-}
-
 #topWrap div.p-topWrap__banner{
 	width: 47.2vw;
     height: 15.467vw;

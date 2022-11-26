@@ -83,19 +83,19 @@ $(function () {
 });
 
 // 背景画像を移動
-$(function () {
-    $(window).scroll(function () {
-        let wHeight = $(window).height();
-        let scrollAmount = $(window).scrollTop();
-        $('#mainBG div.p-front').each(function () {
-            let targetPosition = $('#aboutSection').offset().top;
-            if(scrollAmount > targetPosition - wHeight + 50) {
-                $('#mainBG div.p-front').removeClass('positionC');
-                $('#mainBG div.p-front').addClass('positionB');
-            }else{
-                $('#mainBG div.p-front').removeClass('positionB');
-                $('#mainBG div.p-front').addClass('positionC');
-            }
-        });
-    });
-});
+// $(function () {
+//     $(window).scroll(function () {
+//         let wHeight = $(window).height();
+//         let scrollAmount = $(window).scrollTop();
+//         $('#mainBG div.p-front').each(function () {
+//             let targetPosition = $('#aboutSection').offset().top;
+//             if(scrollAmount > targetPosition - wHeight + 50) {
+//                 $('#mainBG div.p-front').removeClass('positionC');
+//                 $('#mainBG div.p-front').addClass('positionB');
+//             }else{
+//                 $('#mainBG div.p-front').removeClass('positionB');
+//                 $('#mainBG div.p-front').addClass('positionC');
+//             }
+//         });
+//     });
+// });
