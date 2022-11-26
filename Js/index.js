@@ -1,9 +1,5 @@
 // ツールチップ
-$(function(){
-    $('.p-topWrap__mask').niceTooltip({
-        HTML: "新型コロナウィルス感染症対策ガイドライン",
-    });
-});
+
 
 // チケットスライド
 $(window).scroll(function () {
