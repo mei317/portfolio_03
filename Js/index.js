@@ -1,11 +1,3 @@
-// フッター文字流す
-    $('.marquee').marquee({
-        duration: 10000,
-        pauseOnHover: false,
-        gap: 150,
-        duplicated: true,
-        pauseSpeed: 0
-    });
 // ツールチップ
 $(function(){
     $('.p-topWrap__mask').niceTooltip({
