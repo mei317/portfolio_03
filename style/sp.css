@@ -247,7 +247,7 @@ body #topWrap nav{
     position: absolute;
     left: 0;
     bottom: 0;
-    background: url(../img/eyes/icon.svg) no-repeat 0 100%/8.933vw 4.533vw;
+    background: 0 100%/8.933vw 4.533vw;
     animation: 3s -2s linear infinite eyes_blink;
 }
 
