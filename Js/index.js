@@ -95,6 +95,7 @@ $(function () {
 });
 
 // 背景画像を移動
+$(function () {
     $(window).scroll(function () {
         let wHeight = $(window).height();
         let scrollAmount = $(window).scrollTop();
@@ -109,3 +110,4 @@ $(function () {
             }
         });
     });
+});
