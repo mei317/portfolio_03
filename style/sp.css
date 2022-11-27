@@ -1048,13 +1048,13 @@ div.c-star img.c-starItemB{
     width: 51.8vw;
     height: 31.333vw;
     top: -22.4vw;
-    left: 16.933vw;
+    left: -0.05vw;
 }
 
 #ticketSection img.p-ticket__logo{
     width: 27.4vw;
     height: 35.8vw;
-    margin-top: 6vw;
+    margin-top: 4vw;
 }
 
 #ticketSection div.p-ticket__text{
