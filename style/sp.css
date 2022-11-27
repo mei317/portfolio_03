@@ -25,13 +25,6 @@ body #topWrap header{
     top: 2.667vw;
 }
 
-body[data-mode=loaded][data-scroll=""] #topWrap nav,
-body[data-mode=loaded][data-scroll=""] #topWrap div.p-topWrap__banner,
-body[data-mode=loaded][data-scroll=""] #topWrap #news{
-    transition-delay: .5s;
-}
-
-
 #topWrap #news,
 #topWrap div.p-topWrap__banner,
 #topWrap nav,
@@ -62,15 +55,11 @@ body[data-mode=loaded][data-scroll=""] #topWrap #news{
     text-decoration: none;
 }
 
-body #topWrap nav{
-    transform: translateY(-7vw);
-}
-
 #topWrap nav{
     display: flex;
     position: fixed;
     align-items: center;
-    top: 2.133vw;
+    top: -0.867vw;
     right: 3.467vw;
 }
 
@@ -89,18 +78,9 @@ body #topWrap nav{
 }
 
 #topWrap nav div.p-topWrap__mask img {
-    width: 2vw;
-    height: 3vw;
-    margin-top: 1vw;
-}
-
-#topWrap div.p-topWrap__banner{
-	width: 47.2vw;
-    height: 15.467vw;
-    border-radius: 1.333vw;
-    overflow: hidden;
-    position: fixed;
-    bottom: 11.2vw;
+    width: 5vw;
+    height: 7vw;
+    margin-top: 3vw;
 }
 
 #topWrap div.p-topWrap__banner div.cs{
@@ -110,24 +90,6 @@ body #topWrap nav{
     overflow: hidden;
     text-decoration: none;
 }
-
-#topWrap div.p-topWrap__banner.ar div.c-box{
-    width: 100%;
-    height: 100%;
-    padding: 0.8vw 0 0.8vw 0.8vw;
-    font-size: 0;
-    background: 20.8vw 50%/24.667vw 5.733vw, 0 0/150px 150px;
-}
-
-#topWrap div.p-topWrap__banner.ar div.c-box::before{
-    content: "";
-    display: block;
-    width: 18.4vw;
-    height: 100%;
-    /* border-radius: 0.667vw; */
-    background: 50% 50%/auto 100%;
-}
-/* ----------ARBanner----------- */
 
 .c-hoverType_a,
 .c-hoverType_ax,
@@ -143,18 +105,35 @@ body #topWrap nav{
     position: relative;
 }
 
+
+/* ticketBanner */
 .p-topWrap__bannerPC{
     display: none;
 }
 
-/* ticketBanner */
-#topWrap div.p-topWrap__banner{
+#topWrap div.p-topWrap__banner.ticketIn{
+    width: 47.2vw;
+    height: 15.467vw;
+    border-radius: 1.333vw;
+    overflow: hidden;
+    position: fixed;
+    bottom: 4.2vw;
     right: 1.867vw;
     background: #fff;
 }
 
+#topWrap div.p-topWrap__banner a,
+#topWrap div.p-topWrap__banner .cs {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+}
+
 #topWrap div.p-topWrap__banner a{
     padding: 1.067vw;
+    background-color: #fff;
 }
 
 #topWrap div.p-topWrap__banner div.c-box{
@@ -167,7 +146,7 @@ body #topWrap nav{
     padding: 0 2.933vw 0 11.733vw;
     font-size: 3.067vw;
     line-height: 1.304;
-    background: url(../img/.svg) no-repeat 1.867vw 50%/8.533vw 8.533vw;
+    background: url(../img/logo.png) no-repeat 2.5vw 65%/7.533vw 9.533vw;
 }
 
 #topWrap div.p-topWrap__banner div.c-box::before,
@@ -193,7 +172,6 @@ body #topWrap nav{
     top: 0;
     right: 0;
     box-shadow: -0.533vw 0 #57ab48;
-    background: url(../img/fix/.svg) no-repeat 50% 50%/2.4vw 10.667vw;
 }
 /* ---------ticketBanner------------ */
 
@@ -326,22 +304,6 @@ body[data-mode=loaded] #mainBG div.c-bgBox{
 
     100% {
         transform: translateY(-200px);
-    }
-}
-
-.positionC{
-    animation-name: positionC;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes positionC{
-    0% {
-        transform: translateY(-200px);
-    }
-
-    100% {
-        transform: translateY(0px);
     }
 }
 
@@ -504,58 +466,11 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     position: relative;
 }
 
-/* slideIn*/
-.slideIn{
-    animation-name: slideOut;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes slideIn{
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#titleSectionSP h1{
+#titleSectionSP img{
     width: 100%;
-    height: 42vw;
-    font-family: 'Dela Gothic One', cursive;
-    font-size: 3.5rem;
-    font-weight: 200;
-    color: #fff;
-    margin-bottom: -133.5px;
+    height: 20vw;
+    margin-top: 2vh;
 }
-
-#titleSectionSP p{
-    font-family: 'Dela Gothic One', cursive;
-    color: #fff;
-}
-
-#titleSectionSP .c-containerTitle{
-    font-size: 2.9rem;
-    font-weight: 200;
-    margin-bottom: -28px;
-}
-
-#titleSectionSP .c-containerDay{
-    font-size: 2.35rem;
-    font-weight: 100;
-    margin-bottom: -26px;
-}
-
-#titleSectionSP span{
-    font-family: 'Dela Gothic One', cursive;
-    font-size: 2.4rem;
-    font-weight: 100;
-    color: #fff;
-}
-/* -------slideIn-------- */
 /* ---------title-------------- */
 
 /* about */
@@ -594,12 +509,12 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
 }
 
 /* star */
-#aboutSection div.c-mob_star{
+#aboutSection div.c-star{
     left: 65vw;
     top: -30vw;
 }
 
-div.c-mob_star.type{
+div.c-star{
     width: 32vw;
     height: 20vw;
     position: absolute;
@@ -607,7 +522,8 @@ div.c-mob_star.type{
     transform-origin: 50% 50%;
 }
 
-div.c-mob_star.type img.c-starItemA, div.c-mob_star.type img.c-starItemB{
+div.c-star img.c-starItemA,
+div.c-star img.c-starItemB{
     width: 20vw;
     height: 20vw;
     position: absolute;
@@ -615,11 +531,11 @@ div.c-mob_star.type img.c-starItemA, div.c-mob_star.type img.c-starItemB{
     transition: transform .1s 0s linear;
 }
 
-div.c-mob_star.type img.c-starItemA{
+div.c-star img.c-starItemA{
     left: 0;
 }
 
-div.c-mob_star.type img.c-starItemB{
+div.c-star img.c-starItemB{
     right: 0;
 }
 /* ------------star------------ */
@@ -655,16 +571,14 @@ div.c-mob_star.type img.c-starItemB{
     }
 }
 /* --------------------------------- */
-#accessSection h2,
+/* #accessSection h2,
 #ticketSection h2,
 #programSection h2,
 #floorSection h2,
 #comedianSection h2,
 #aboutSection h2 {
-    background: no-repeat 0 0/contain;
     position: absolute;
-    transform: scale(0);
-}
+} */
 
 #aboutSection h2{
     width: 53.2vw;
@@ -718,14 +632,14 @@ div.c-mob_star.type img.c-starItemB{
     font-size: 2.666vw;
 }
 
-#aboutSection div.p-aboutData div.c-mob_star{
+#aboutSection div.p-aboutData div.c-star{
     top: -0.6vw;
     left: -1.5vw;
     width: 6vw;
     height: 6vw;
 }
 
-#aboutSection div.p-aboutData div.c-mob_star img{
+#aboutSection div.p-aboutData div.c-star img{
     width: 6vw;
     height: 6vw;
 }
@@ -747,7 +661,7 @@ div.c-mob_star.type img.c-starItemB{
     margin-top: -10px;
 }
 
-#comedianSection div.c-mob_star{
+#comedianSection div.c-star{
     top: -12vw;
 }
 
@@ -844,81 +758,12 @@ div.c-mob_star.type img.c-starItemB{
 }
 /* -----------comedian------------- */
 
-/* floor */
-/* #floorSection{
-    margin-top: 3.733vw;
-    position: relative;
-}
-
-#floorSection h2 {
-    width: 50.667vw;
-    height: 22.133vw;
-    top: -11.733vw;
-    left: 12.533vw;
-    background-image: url(../img/floor/title_sp.svg);
-    transform-origin: 100% 100%;
-    z-index: 10;
-}
-
-#floorSection #floorSlide{
-    width: 100%;
-    overflow: hidden;
-    padding-bottom: 3.067vw;
-    font-size: 2.667vw;
-    line-height: 1.4;
-}
-
-.c-swiper{
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-}
-
-body div.p-swipeSlide, body div.c-swipeWrap{
-    content-visibility: auto;
-}
-
-.c-swipeWrap{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: flex;
-    transition-property: transform;
-    box-sizing: content-box;
-}
-
-#floorSection #floorSlide div.p-swipeSlide{
-    width: 92vw;
-    padding: 6.667vw 1.333vw 0;
-    position: relative;
-}
-
-.swipeBackface-hidden .p-swipeSlide{
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.p-swipeSlide{
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition-property: transform;
-} */
-/* -----------floor-------------- */
-
 /* program */
 #programSection{
     margin-top: 24vw;
 }
 
-#programSection div.c-mob_star{
+#programSection div.c-star{
     top: -12vw;
 }
 
@@ -1190,16 +1035,15 @@ body div.p-swipeSlide, body div.c-swipeWrap{
 }
 
 #ticketSection div.c-container{
-    width: 123.467vw;
-    height: 123.467vw;
+    width: 100%;
+    height: 100vw;
     border-radius: 61.7335vw;
     background: #fff;
-    margin-left: -11.7335vw;
     padding: 0 15.7335vw;
 }
 
-#ticketSection div.c-container>div.c-mob_star{
-    left: 75vw;
+#ticketSection div.c-container>div.c-star{
+    left: 63vw;
     top: -6vw;
 }
 
@@ -1207,16 +1051,8 @@ body div.p-swipeSlide, body div.c-swipeWrap{
     position: absolute;
     width: 51.8vw;
     height: 31.333vw;
-    top: -20.4vw;
+    top: -22.4vw;
     left: 16.933vw;
-}
-
-#ticketSection h3.p-ticket__logo{
-    width: 38.4vw;
-    height: 56.8vw;
-    padding-top: 10vw;
-    margin: 0 auto;
-    font-size: 0;
 }
 
 #ticketSection h3.p-ticket__logo img{
@@ -1224,15 +1060,20 @@ body div.p-swipeSlide, body div.c-swipeWrap{
     height: auto;
 }
 
+#ticketSection .p-ticket__logo{
+    width: 27.4vw;
+    height: 35.8vw;
+    margin-top: 6vw;
+}
+
 #ticketSection div.p-ticket__text{
-    margin-top: 6.5vw;
     text-align: left;
 }
 
 #ticketSection div.p-ticket__btn{
     display: flex;
     justify-content: center;
-    margin-top: 5.467vw;
+    margin-top: 1vw;
 }
 
 #ticketSection div.p-ticket__btn::before,
@@ -1283,7 +1124,7 @@ body div.p-swipeSlide, body div.c-swipeWrap{
 }
 
 #accessSection div.c-container{
-    padding: 23.733vw 0 20.533vw;
+    padding: 0vw 0 20.533vw;
     background: 0 0/150px 150px #65cd25;
     color: #fff;
 }
@@ -1292,7 +1133,7 @@ body div.p-swipeSlide, body div.c-swipeWrap{
     position: absolute;
     width: 57.4vw;
     height: 25.867vw;
-    top: -5.067vw;
+    top: -21.067vw;
     left: 5.6vw;
 }
 
@@ -1316,9 +1157,10 @@ body div.p-swipeSlide, body div.c-swipeWrap{
     text-align: left;
 }
 
-#accessSection div.p-access__text figure img.p-access__textImg{
-    width: 100%;
-    height: auto;
+#accessSection .p-access__textImg{
+    font-size: 57px;
+    font-weight: 900;
+    color: #fff;
 }
 
 #accessSection div.p-access__text figcaption{
@@ -1342,13 +1184,19 @@ body div.p-swipeSlide, body div.c-swipeWrap{
     padding-left: 5.333vw;
 }
 
-#accessSection .c-mob_star{
-    transform: scale(0.32);
-    transform-origin: 0 50%;
-    top: 50%;
-    left: -2%;
-    margin-top: -10.5vw;
+#accessSection .c-star{
+    top: -9%;
+    left: 62%;
 }
+
+#accessSection .c-star.typeA img.c-starItemA,
+#accessSection .c-star.typeB img.c-starItemA{
+    width: 6vw;
+    height: 6vw;
+    top: 0.9vw;
+    left: -174%;
+}
+
 /* ------------access-------------- */
 
 /* note */
@@ -1382,7 +1230,7 @@ body div.p-swipeSlide, body div.c-swipeWrap{
     color: #fff;
 }
 
-#noteSectionSP div.c-mob_star{
+#noteSectionSP div.c-star{
     top: -15vw;
     left: 50%;
     margin-left: -13.133vw;
@@ -1470,7 +1318,7 @@ body div.p-swipeSlide, body div.c-swipeWrap{
     margin-top: -8vw;
 }
 
-#contactSection div.c-mob_star{
+#contactSection div.c-star{
     top: -18vw;
     left: 11%;
     margin-left: -10vw;
@@ -1588,15 +1436,19 @@ body div.p-swipeSlide, body div.c-swipeWrap{
     margin-top: 10.933vw;
 }
 
+#footerSP .p-footer__logo a{
+    text-decoration: none;
+}
+
+#footerSP div.p-footer__logo img{
+    width: 200px;
+}
+
 #footerSP .c-logoText{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     margin-top: 10.933vw;
-}
-
-#footerSP .p-footer__logo a{
-    text-decoration: none;
 }
 
 #footerSP .c-logoText h1{
@@ -1624,14 +1476,14 @@ body div.p-swipeSlide, body div.c-swipeWrap{
 }
 /* --------footerLogo--------- */
 
-#footerSP li div.c-mob_star.type{
+#footerSP li div.c-star{
     top: -1vw;
     left: -1.5vw;
     width: 6vw;
     height: 6vw;
 }
 
-#footerSP li div.c-mob_star.type img{
+#footerSP li div.c-star img{
     width: 6vw;
     height: 6vw;
 }

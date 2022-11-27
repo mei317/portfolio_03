@@ -60,7 +60,6 @@ body{
 /* #titleSection nav ul.lang li a,
 #titleSection nav ul.lang li span, */
 /* #titleSection h1,
-#topWrap div.p-topWrap__banner.ar div.c-box,
 #topWrap nav li a, */
 #accessSection h2,
 #ticketSection h2,
@@ -114,49 +113,6 @@ body #topWrap nav{
     opacity: 0.5;
 }
 
-/* ARBanner */
-#topWrap div.p-topWrap__banner.ar{
-    width: 179px;
-    height: 180px;
-    position: fixed;
-    left: 10px;
-    bottom: 50px;
-}
-
-#topWrap div.p-topWrap__banner.ar a,
-#topWrap div.p-topWrap__banner.ar div.cs{
-    width: 179px;
-    height: 180px;
-}
-
-.c-hoverType_a,
-.c-hoverType_ax,
-.c-hoverType_b,
-.c-hoverType_d{
-    display: block;
-    position: relative;
-}
-/* ----------ARBanner----------- */
-
-#topWrap div.p-topWrap__banner.ar div.c-box{
-    width: 179px;
-    height: 180px;
-    padding: 10px 9px 8px 10px;
-    overflow: hidden;
-    font-size: 0;
-    border-radius: 10px;
-    background: 0 100%/100% auto,0 0/300px 300px;
-}
-
-#topWrap div.p-topWrap__banner.ar div.c-box::before{
-    content: "";
-    display: block;
-    width: 160px;
-    height: 120px;
-    border-radius: 3px;
-    background: 0 0/100% auto;
-}
-
 .c-hoverType_a div.c-box,
 .c-hoverType_d div.c-box{
     overflow: hidden;
@@ -205,12 +161,12 @@ body #topWrap nav{
     background: #e878b3;
 }
 
+/* ticketBanner */
 #topWrap div.p-topWrap__banner{
     display: none;
 }
 
-/* ticketBanner */
-#topWrap div.p-topWrap__bannerPC{
+#topWrap div.p-topWrap__bannerPC.ticketIn{
     display: block;
     width: 184px;
     height: 58px;
@@ -218,44 +174,6 @@ body #topWrap nav{
     right: 10px;
     bottom: 50px;
     background-color: #fff;
-}
-
-#topWrap .ticketOut{
-    animation: ticketOut 0.5s forwards;
-}
-
-@keyframes ticketOut{
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(350px);
-    }
-}
-
-#topWrap .ticketIn {
-    animation: ticketIn 0.5s forwards;
-}
-
-@keyframes ticketIn{
-    from {
-        transform: translateX(350px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-/* ------------------------------------ */
-
-@keyframes slideRight{
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 #topWrap div.p-topWrap__bannerPC a{
@@ -319,7 +237,7 @@ body #topWrap nav{
     top: 0;
     left: 0;
 }
-
+/*
 .c-hoverType_a div.c-hoverStar,
 .c-hoverType_ax div.c-hoverStar,
 .c-hoverType_b div.c-hoverStar,
@@ -353,7 +271,7 @@ body #topWrap nav{
         opacity: 1;
         transform:scale3d(1,1,1);
     }
-}
+} */
 /* ---------ticketBanner------------ */
 
 /* newsVar */
@@ -425,10 +343,6 @@ body #topWrap nav{
     transform: scale(1.41);
 }
 
-body[data-mode=loaded] #mainBG div.c-bgBox.back{
-    animation: .6s .1s cubic-bezier(0.22, 1, 0.36, 1) 1 mainView both;
-}
-
 body[data-mode=loaded] #mainBG div.c-bgBox{
     transform: translate(0, 0);
 }
@@ -442,13 +356,22 @@ body[data-mode=loaded] #mainBG div.c-bgBox{
     transform: translate(0, 1340px);
 }
 
-#mainBG div.p-back,
+#mainBG div.p-back{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: -1.4vw;
+    left: 0;
+    transition: 0.7s ease-in-out;
+}
+
 #mainBG div.p-front{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: -1.4vw;
     left: 0;
+    transition: 0.7s ease-in-out;
 }
 
 .positionA{
@@ -469,33 +392,17 @@ body[data-mode=loaded] #mainBG div.c-bgBox{
 
 .positionB{
     animation-name: positionB;
-    animation-duration: 0.8s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
 @keyframes positionB{
-    0% {
+    from {
         transform: translateY(0px);
     }
 
-    100% {
+    to {
         transform: translateY(-200px);
-    }
-}
-
-.positionC{
-    animation-name: positionC;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes positionC{
-    0% {
-        transform: translateY(-200px);
-    }
-
-    100% {
-        transform: translateY(0px);
     }
 }
 
@@ -509,21 +416,12 @@ body[data-scroll=top] #mainBG div.p-backImage{
     position: absolute;
     top: -40px;
     left: 754px;
-    transition: top .5s 0s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 #mainBG div.p-back img,
 #mainBG div.p-front img{
     width: 100%;
     height: auto;
-}
-
-body[data-mode=loaded] #mainBG div.c-bgBox.front{
-    animation: .7s 0s cubic-bezier(0.22, 1, 0.36, 1) 1 mobView both;
-}
-
-body[data-mode=loaded][data-move=play] #mainBG div.p-frontImage{
-    animation-play-state: running;
 }
 
 #mainBG div.p-front.bg_1 div.p-frontImage{
@@ -652,59 +550,27 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     position: relative;
 }
 
-#mainWrap div.c-container{
+#mainWrap div.c-container.slideIn{
     width: 1280px;
     margin: 0 auto;
     position: relative;
     text-align: center;
-    animation: slideIn 0.3s ease 1s 1 normal backwards;
-}
-
-/* slideIn*/
-.slideIn{
-    animation-name: slideOut;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes slideIn{
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 /* ---------------------------------- */
+
 #titleSectionSP{
     display: none;
 }
 
-#titleSection h1{
-    font-family: 'Dela Gothic One', cursive;
-    font-size: 11.5rem;
-    font-weight: 200;
-    color: #fff;
-    margin-bottom: -126px;
+#titleSection{
+    height: 100vh;
+    position: relative;
 }
 
-#titleSection p{
-    font-family: 'Dela Gothic One', cursive;
-    font-size: 9.5rem;
-    font-weight: 200;
-    color: #fff;
-    margin-bottom: -76px;
+#titleSection img{
+    width: 100%;
+    height: 20vw;
 }
-
-#titleSection span{
-    font-family: 'Dela Gothic One', cursive;
-    font-size: 3.77rem;
-    font-weight: 100;
-    color: #fff;
-}
-/* -------slideIn-------- */
 /* ---------title-------------- */
 
 /* about */
@@ -741,7 +607,7 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     background: 0 0/300px 300px #ea7fb8;
 }
 
-#aboutSection div.c-mob_star{
+#aboutSection div.c-star{
     width: 197px;
     height: 100px;
     position: absolute;
@@ -750,25 +616,25 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
 }
 
 /* star */
-div.c-mob_star.type{
+div.c-star{
     width: 197px;
     height: 100px;
     position: absolute;
 }
 
-div.c-mob_star.type img.c-starItemA,
-div.c-mob_star.type img.c-starItemB{
+div.c-star img.c-starItemA,
+div.c-star img.c-starItemB{
     width: 100px;
     height: 100px;
     position: absolute;
     top: 0;
 }
 
-div.c-mob_star.type img.c-starItemA{
+div.c-star img.c-starItemA{
     left: 0;
 }
 
-div.c-mob_star.type img.c-starItemB{
+div.c-star img.c-starItemB{
     right: 30px;
 }
 /* ------------star------------ */
@@ -845,12 +711,12 @@ div.c-mob_star.type img.c-starItemB{
     text-align: left;
 }
 
-#aboutSection div.p-aboutDataPC div.c-mob_star{
+#aboutSection div.p-aboutDataPC div.c-star{
     top: -2px;
     left: -20px;
 }
 
-#aboutSection div.p-aboutDataPC div.c-mob_star img{
+#aboutSection div.p-aboutDataPC div.c-star img{
     width: 2vw;
     height: 2vw;
 }
@@ -883,7 +749,7 @@ div.c-mob_star.type img.c-starItemB{
     background: 0 0/300px 300px #65cd25;
 }
 
-#comedianSection div.c-mob_star{
+#comedianSection div.c-star{
     top: -4vw;
     left: 50%;
 }
@@ -1005,77 +871,12 @@ div.c-mob_star.type img.c-starItemB{
 }
 /* -----------comedian------------- */
 
-/* floor */
-/* #floorSection{
-    margin-top: 3.733vw;
-    position: relative;
-}
-
-#floorSection h2 {
-    width: 50.667vw;
-    height: 22.133vw;
-    top: -11.733vw;
-    left: 12.533vw;
-    background-image: url(../img/floor/title_sp.svg);
-    transform-origin: 100% 100%;
-    z-index: 10;
-}
-
-#floorSection #floorSlide{
-    width: 100%;
-    overflow: hidden;
-    padding-bottom: 3.067vw;
-    font-size: 2.667vw;
-    line-height: 1.4;
-}
-
-.c-swiper{
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-}
-
-.c-swipeWrap{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: flex;
-    transition-property: transform;
-    box-sizing: content-box;
-}
-
-#floorSection #floorSlide div.p-swipeSlide{
-    width: 92vw;
-    padding: 6.667vw 1.333vw 0;
-    position: relative;
-}
-
-.swipeBackface-hidden .p-swipeSlide{
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.p-swipeSlide{
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition-property: transform;
-} */
-/* -----------floor-------------- */
-
 /* program */
 #programSection{
     margin-top: 194px;
 }
 
-#programSection div.c-mob_star{
+#programSection div.c-star{
     top: -53px;
     left: 50%;
 }
@@ -1344,7 +1145,7 @@ div.c-mob_star.type img.c-starItemB{
     background: #fff;
 }
 
-#ticketSection div.c-container>div.c-mob_star{
+#ticketSection div.c-container>div.c-star{
     left: 116px;
     top: -62px;
 }
@@ -1426,7 +1227,7 @@ div.c-mob_star.type img.c-starItemB{
     clip-path: polygon(35% 28%, 54% 70%, 31% 123%, 81% 29%, 92% 67%, -5% 108%);
 }
 
-#accessSection div.c-mob_star{
+#accessSection div.c-star{
     top: -180px;
     left: 0%;
 }
@@ -1493,12 +1294,12 @@ div.c-mob_star.type img.c-starItemB{
     padding-left: 20px;
 }
 
-#accessSection div.p-access__text div.c-mob_star{
+#accessSection div.p-access__text div.c-star{
     top: -2px;
     left: 20%;
 }
 
-#accessSection div.p-access__text div.c-mob_star .c-starItemA{
+#accessSection div.p-access__text div.c-star .c-starItemA{
     left: -50%;
     width: 30px;
     height: 30px;
@@ -1540,7 +1341,7 @@ div.c-mob_star.type img.c-starItemB{
     color: #fff;
 }
 
-#noteSection div.c-mob_star{
+#noteSection div.c-star{
     top: -197px;
     left: 45%;
 }
@@ -1610,7 +1411,7 @@ div.c-mob_star.type img.c-starItemB{
     overflow: hidden;
 }
 
-#contactSection div.c-mob_star{
+#contactSection div.c-star{
     top: -170px;
     left: 3%;
 }
@@ -1815,12 +1616,12 @@ div.c-mob_star.type img.c-starItemB{
     opacity: 0.5;
 }
 
-#footer li div.c-mob_star.type{
+#footer li div.c-star{
     top: 5px;
     left: -10px;
 }
 
-#footer li div.c-mob_star.type img{
+#footer li div.c-star img{
     width: 25px;
     height: 25px;
 }
