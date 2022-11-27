@@ -73,17 +73,17 @@ img {
     .u-external-link__a{
         position: absolute;
         color: #fff;
-        width: 20px;
+        width: 24px;
         content: "";
-        top: 2.5px;
+        top: 11.5px;
     }
 
     .u-external-link__b{
         position: absolute;
         color: #fff;
-        width: 23px;
+        width: 24px;
         content: "";
-        top: 13px;
+        top: 12px;
         left: 75%;
     }
 

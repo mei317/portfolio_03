@@ -41,9 +41,14 @@ body[data-mode=loaded] #titleSection h1{
     transform: none;
 }
 
-body #topWrap #news,
-body #topWrap #newsPC{
-    transform: translateY(50px);
+/* newsBar */
+@keyframes banner{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 
