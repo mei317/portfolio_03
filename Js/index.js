@@ -6,7 +6,7 @@
         let scrollAmount = $(window).scrollTop();
         $('.p-topWrap__bannerPC').each(function () {
             let targetPosition = $('#aboutSection').offset().top;
-            if(scrollAmount > targetPosition - wHeight + 100) {
+            if(scrollAmount > targetPosition - wHeight + 10) {
                 $('.p-topWrap__bannerPC').removeClass('ticketIn');
             }else{
                 $('.p-topWrap__bannerPC').addClass('ticketIn');

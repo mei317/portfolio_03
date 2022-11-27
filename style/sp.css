@@ -1051,12 +1051,7 @@ div.c-star img.c-starItemB{
     left: 16.933vw;
 }
 
-#ticketSection h3.p-ticket__logo img{
-    width: 100%;
-    height: auto;
-}
-
-#ticketSection .p-ticket__logo{
+#ticketSection img.p-ticket__logo{
     width: 27.4vw;
     height: 35.8vw;
     margin-top: 6vw;

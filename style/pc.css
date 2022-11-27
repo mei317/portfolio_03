@@ -52,15 +52,8 @@ body{
 }
 
 #comedianSlide ul.sns a,
-/* #footer div.p-footer__logo p a,
-#footer div.p-footer__logo h1, */
-/* #footerSP div.p-footer__logo p a,
-#footerSP div.p-footer__logo h1, */
+
 #floorSection #floorSlide div.swiper-slide h3,
-/* #titleSection nav ul.lang li a,
-#titleSection nav ul.lang li span, */
-/* #titleSection h1,
-#topWrap nav li a, */
 #accessSection h2,
 #ticketSection h2,
 #programSection h2,
@@ -69,10 +62,6 @@ body{
 #comedianSection h2,
 #aboutSection h2 {
     overflow: hidden;
-}
-
-body #topWrap nav{
-    transform: translateY(-70px);
 }
 
 #topWrap nav{
@@ -551,7 +540,7 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     position: relative;
 }
 
-#mainWrap div.c-container.slideIn{
+#titleWrap div.c-container.slideIn{
     width: 1280px;
     margin: 0 auto;
     position: relative;
@@ -568,10 +557,16 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
 }
 
 #titleSection img{
-    width: 100%;
-    height: 20vw;
+    width: 1280px;
+    padding-top: 40px;
+    height: 220px;
 }
 /* ---------title-------------- */
+#mainWrap div.c-container{
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
 
 /* about */
 #aboutSection{
@@ -582,7 +577,8 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     margin-top: 58px;
 }
 
-#aboutSection::before, #aboutSection::after {
+#aboutSection::before,
+#aboutSection::after {
     content: "";
     width: 100%;
     background: repeat-x 50% 0/1600px auto;
@@ -596,7 +592,7 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     height: 13.333vw;
     background: 0 0/150px 150px #ea7fb8;
     position: absolute;
-    top: 0;
+    top: -56px;
     left: 0;
     clip-path: polygon(14% 27%, 45.6% 13%, 47.333% 94%, 79% 25%, 100% 86%, 0% 100%);
 }
@@ -611,7 +607,7 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     width: 197px;
     height: 100px;
     position: absolute;
-    top: -160px;
+    top: -227px;
     left: 455px;
 }
 
@@ -644,7 +640,7 @@ div.c-star img.c-starItemB{
     position: absolute;
     width: 266px;
     height: 163px;
-    top: -199px;
+    top: -220px;
     left: 79px;
 }
 
@@ -776,6 +772,14 @@ div.c-star img.c-starItemB{
     text-decoration: none;
 }
 
+.c-hoverType_a,
+.c-hoverType_ax,
+.c-hoverType_b,
+.c-hoverType_d{
+    display: block;
+    position: relative;
+}
+
 #comedianSection li figure{
     position: relative;
     padding-top: 170px;
@@ -841,6 +845,10 @@ div.c-star img.c-starItemB{
     left: 0;
     mix-blend-mode: multiply;
     opacity: 0;
+}
+
+#comedianSection li div.c-hoverBox{
+    padding-top: 170px;
 }
 
 .c-hoverType_ax div.c-hoverBox:hover{
@@ -1135,18 +1143,19 @@ div.c-star img.c-starItemB{
 
 /* ticket */
 #ticketSection{
-    margin-top: 141px;
+    margin-top: 70px;
 }
 
 #ticketSection div.c-container{
-    width: 464px;
-    height: 464px;
-    border-radius: 232px;
+    width: 700px;
+    height: 700px;
+    border-radius: 340px;
     background: #fff;
+    text-align: center;
 }
 
 #ticketSection div.c-container>div.c-star{
-    left: 116px;
+    left: 226px;
     top: -62px;
 }
 
@@ -1154,31 +1163,26 @@ div.c-star img.c-starItemB{
     position: absolute;
     width: 293px;
     height: 171px;
-    top: -38px;
-    left: -170px;
+    top: -40px;
+    left: -50px;
 }
 
-#ticketSection h3.p-ticket__logo{
-    width: 146px;
-    padding-top: 25px;
+#ticketSection img.p-ticket__logo{
+    width: 200px;
+    padding-top: 60px;
     margin: 0 auto;
     font-size: 0;
 }
 
-#ticketSection h3.p-ticket__logo img{
-    width: 100%;
-    height: auto;
-}
-
 #ticketSection div.p-ticket__text{
     padding: 0 56px;
-    margin-top: 19px;
+    margin-top: 40px;
 }
 
 #ticketSection div.p-ticket__btn{
     display: flex;
     justify-content: center;
-    margin-top: 21px;
+    margin-top: 50px;
 }
 
 #ticketSection div.p-ticket__btn a{
@@ -1186,11 +1190,11 @@ div.c-star img.c-starItemB{
 }
 
 #ticketSection div.p-ticket__btn a div.p-ticket__box{
-    border-radius: 26px;
+    border-radius: 66px;
     white-space: nowrap;
-    background: #56ac49;
+    background: #56ac49;;
     color: #fff;
-    padding: 10px 38px 10px 27px;
+    padding: 20px 70px 20px 60px;
 }
 
 #ticketSection div.p-ticket__btn a div.p-ticket__box:hover{
@@ -1206,12 +1210,12 @@ div.c-star img.c-starItemB{
 
 #ticketSection div.p-ticket__btn a p{
     position: relative;
+    font-size: 2.4rem;
 }
 /* -------------ticket----------------- */
 
 /* access */
 #accessSection{
-    padding-top: 88px;
     position: relative;
     margin-top: 78px;
 }
@@ -1282,7 +1286,6 @@ div.c-star img.c-starItemB{
 #accessSection div.p-access__text figcaption{
     font-size: 1.6rem;
     text-align: left;
-    margin-left: 7vw;
 }
 
 #accessSection div.p-access__text ul{
