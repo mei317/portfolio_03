@@ -1,18 +1,4 @@
 // ツールチップ
-// タイトルスライドイン
-    $(window).scroll(function () {
-        let wHeight = $(window).height();
-        let scrollAmount = $(window).scrollTop();
-        $('#titleSection .c-container').each(function () {
-            let targetPosition = $('#aboutSection').offset().top;
-            if(scrollAmount > targetPosition - wHeight + 10) {
-                $('#titleSection .c-container').removeClass('slideIn');
-            }else{
-                $('#titleSection .c-container').addClass('slideIn');
-            }
-        });
-    });
-
 
 // チケットスライドイン
     $(window).scroll(function () {
@@ -27,20 +13,20 @@
             }
         });
     });
+
 // チケットスライドインSP
 $(window).scroll(function () {
     let wHeight = $(window).height();
     let scrollAmount = $(window).scrollTop();
     $('.p-topWrap__banner').each(function () {
         let targetPosition = $('#aboutSection').offset().top;
-        if(scrollAmount > targetPosition - wHeight + 100) {
+        if(scrollAmount > targetPosition - wHeight + 10) {
             $('.p-topWrap__banner').removeClass('ticketIn');
         }else{
             $('.p-topWrap__banner').addClass('ticketIn');
         }
     });
 });
-
 
 // ヘッダースライドイン
 $(function(){

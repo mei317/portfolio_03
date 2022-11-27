@@ -317,7 +317,8 @@ body #topWrap nav{
     min-width: 1300px;
 }
 
-#mainWrap section, #mainWrap footer{
+#mainWrap section,
+#mainWrap footer{
     position: relative;
 }
 
@@ -556,7 +557,6 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     position: relative;
     text-align: center;
 }
-/* ---------------------------------- */
 
 #titleSectionSP{
     display: none;

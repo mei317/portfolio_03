@@ -15,10 +15,6 @@ body{
     -webkit-text-size-adjust: 100%;
 }
 
-body #topWrap header{
-    transform: translateY(-7vw);
-}
-
 #topWrap header{
     position: fixed;
     left: 3.2vw;
@@ -448,12 +444,11 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
 /* -----------background-------------- */
 
 /* title */
-#mainWrap div.c-container {
+#mainWrap div.c-container.slidein{
     width: 100%;
     margin: 0 auto;
     position: relative;
     text-align: center;
-    animation: slideIn 0.3s ease 1s 1 normal backwards;
     padding-top: 20px;
 }
 
@@ -469,7 +464,7 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
 #titleSectionSP img{
     width: 100%;
     height: 20vw;
-    margin-top: 2vh;
+    margin-top: 5vh;
 }
 /* ---------title-------------- */
 
@@ -1040,6 +1035,7 @@ div.c-star img.c-starItemB{
     border-radius: 61.7335vw;
     background: #fff;
     padding: 0 15.7335vw;
+    text-align: center;
 }
 
 #ticketSection div.c-container>div.c-star{
@@ -1277,9 +1273,11 @@ div.c-star img.c-starItemB{
 }
 
 #noteSectionSP .p-note figure img{
-    width: 55%;
-    height: 100%;
+    width: 52%;
+    height: 101%;
     object-fit: cover;
+    position: absolute;
+    left: 24%;
 }
 
 #noteSectionSP .p-note figcaption{
