@@ -160,7 +160,7 @@ body{
     width: 184px;
     height: 58px;
     position: fixed;
-    right: 10px;
+    right: 30px;
     bottom: 50px;
     background-color: #fff;
 }
@@ -590,9 +590,9 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     content: "";
     width: 100%;
     height: 13.333vw;
-    background: 0 0/150px 150px #ea7fb8;
+    background: #ea7fb8;
     position: absolute;
-    top: -56px;
+    top: -25px;
     left: 0;
     clip-path: polygon(14% 27%, 45.6% 13%, 47.333% 94%, 79% 25%, 100% 86%, 0% 100%);
 }
@@ -607,7 +607,7 @@ body[data-mode=loaded] #mainBG div.p-frontImage{
     width: 197px;
     height: 100px;
     position: absolute;
-    top: -227px;
+    top: -200px;
     left: 455px;
 }
 
@@ -810,7 +810,7 @@ div.c-star img.c-starItemB{
 
 #comedianSection li p.p-comedian__imagePhoto img{
     width: 192px;
-    height: 192px;
+    height: 170px;
 }
 
 #comedianSection li div.p-comedian__text.area{
@@ -861,7 +861,7 @@ div.c-star img.c-starItemB{
 #comedianSection li div.c-hoverBox::before{
     content: "";
     width: 220px;
-    height: 220px;
+    height: 200px;
     border-radius: 24px;
     position: absolute;
     top: 0;
@@ -1423,7 +1423,7 @@ div.c-star img.c-starItemB{
     content: "";
     width: 100%;
     height: 13.333vw;
-    background: 0 0/150px 150px #fff;
+    background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -1434,7 +1434,7 @@ div.c-star img.c-starItemB{
     width: 100%;
     padding: 81px 0 77px;
     position: relative;
-    background: 0 0/300px 300px #fafafa;
+    background-color: #fff;
 }
 
 #contactSection h2{
@@ -1567,37 +1567,8 @@ div.c-star img.c-starItemB{
     text-decoration: none;
 }
 
-#footer .c-logoText{
-    width: 100%;
-    position: relative;
-}
-
-#footer .c-logoText h1{
-    font-family: 'Dela Gothic One', cursive;
-    font-size: 2.7rem;
-    font-weight: 250;
-    color: #fff;
-    margin-bottom: -28px;
-}
-
-#footer .c-logoText p{
-    font-family: 'Dela Gothic One', cursive;
-    font-size: 2.2rem;
-    color: #fff;
-    text-decoration: none;
-}
-
-#footer .p-footer__textImg{
-    font-size:20px;
-    font-weight: 900;
-    color: #fff;
-    text-align: left;
-    line-height: 1.8;
-    margin-left: 2.1vw;
-}
-
-#footer .p-footer__textImg:hover{
-    opacity: 0.5;
+#footer div.p-footer__logo img{
+    width: 276px;
 }
 
 /* ----------footerLogo------------- */
