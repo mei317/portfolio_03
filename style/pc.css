@@ -94,32 +94,38 @@ body{
 /* toolTip */
 .p-topWrap__mask{
     position: relative;
+    text-align: center;
+}
+
+.p-topWrap__mask p{
+    font-size: 12px;
 }
 
 .p-topWrap__mask__Tooltip{
     display: none;
+    width: 22vw;
     position: absolute;
-    padding: 16px;
+    left: -20vw;
+    padding: 2px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
-    background: #333;
-    color: #fff;
+    background: #fff;
+    color: #000;
 }
 
 .p-topWrap__mask__Tooltip:after{
     position: absolute;
-    bottom: 100%;
-    left: 50%;
+    bottom: 84%;
+    left: 90%;
     width: 0;
-    height: 0;
-    margin-left: -10px;
+    height: -33px;
     border: solid transparent;
-    border-color: rgba(51, 51, 51, 0);
-    border-bottom-color: #333;
-    border-width: 10px;
+    border-bottom-color: #fff;
     pointer-events: none;
+    border-width: 14px;
     content: " ";
+    transform: rotate(14deg);
 }
 /* --------------toolTip------------------ */
 
@@ -129,9 +135,9 @@ body{
     margin-top: 2px;
 }
 
-/* #topWrap nav div.p-topWrap__mask img:hover{
+#topWrap nav div.p-topWrap__mask img:hover{
     opacity: 0.5;
-} */
+}
 
 .c-hoverType_a div.c-box,
 .c-hoverType_d div.c-box{

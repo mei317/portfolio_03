@@ -1,9 +1,9 @@
 // ツールチップ
 $(function () {
     $('.p-topWrap__maskImg').hover(function() {
-        $(this).next('.p-topWrap__mask__Tooltip').show();
+        $('.p-topWrap__mask__Tooltip').show();
     }, function(){
-        $(this).next('.p-topWrap__mask__Tooltip').hide();
+        $('.p-topWrap__mask__Tooltip').hide();
     });
 });
 // チケットスライドイン
