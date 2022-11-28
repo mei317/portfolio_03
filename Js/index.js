@@ -1,4 +1,14 @@
 // ツールチップ
+$(function () {
+    $('.p-topWrap__maskTooltip').hide();
+    $('#topWrap nav div.p-topWrap__mask').hover(
+    function () {
+        $(this).children('.p-topWrap__maskTooltip').fadeIn('fast');
+    },
+    function () {
+        $(this).children('.p-topWrap__maskTooltip').fadeOut('fast');
+    });
+});
 
 // チケットスライドイン
     $(window).scroll(function () {
