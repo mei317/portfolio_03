@@ -1,28 +1,24 @@
 // ツールチップ
 $(function () {
-    $('.p-topWrap__maskTooltip').hide();
-    $('#topWrap nav div.p-topWrap__mask').hover(
-    function () {
-        $(this).children('.p-topWrap__maskTooltip').fadeIn('fast');
-    },
-    function () {
-        $(this).children('.p-topWrap__maskTooltip').fadeOut('fast');
+    $('.p-topWrap__maskImg').hover(function() {
+        $(this).next('.p-topWrap__mask__Tooltip').show();
+    }, function(){
+        $(this).next('.p-topWrap__mask__Tooltip').hide();
     });
 });
-
 // チケットスライドイン
-    $(window).scroll(function () {
-        let wHeight = $(window).height();
-        let scrollAmount = $(window).scrollTop();
-        $('.p-topWrap__bannerPC').each(function () {
-            let targetPosition = $('#aboutSection').offset().top;
-            if(scrollAmount > targetPosition - wHeight + 10) {
-                $('.p-topWrap__bannerPC').removeClass('ticketIn');
-            }else{
-                $('.p-topWrap__bannerPC').addClass('ticketIn');
-            }
-        });
+$(window).scroll(function () {
+    let wHeight = $(window).height();
+    let scrollAmount = $(window).scrollTop();
+    $('.p-topWrap__bannerPC').each(function () {
+        let targetPosition = $('#aboutSection').offset().top;
+        if(scrollAmount > targetPosition - wHeight + 10) {
+            $('.p-topWrap__bannerPC').removeClass('ticketIn');
+        }else{
+            $('.p-topWrap__bannerPC').addClass('ticketIn');
+        }
     });
+});
 
 // チケットスライドインSP
 $(window).scroll(function () {

@@ -73,6 +73,10 @@ body{
     display: block;
 }
 
+.p-topWrap__mask__Tooltip{
+    display: none;
+}
+
 #topWrap nav div.p-topWrap__mask img {
     width: 5vw;
     height: 7vw;
@@ -113,7 +117,7 @@ body{
     border-radius: 1.333vw;
     overflow: hidden;
     position: fixed;
-    bottom: 18vw;
+    bottom: 14vw;
     right: 1.867vw;
     background: #fff;
 }
